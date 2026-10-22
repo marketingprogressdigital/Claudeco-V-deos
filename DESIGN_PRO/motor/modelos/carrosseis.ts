@@ -97,14 +97,13 @@ function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<
   const foto = (arquivo: string, foco: [number, number]): Camada => ({ tipo: "foto", foto: arquivo, caixa: cx(0, 0, W, 1350, 1), tratamento: { gradacao: true, tingimento: 0, duotom: false, pb: false, desfoque: 0, opacidade: 1, ajuste: "cobrir", foco } });
   const marcaTopo = (i: number): Camada[] => [logo(M, M, 66, 44), numeracao(i, total, 20)];
 
-  // Capa clara: véu claro no topo (título) e na base (assinatura), foto viva no meio.
-  const capa = tela("claro", "capa", [
-    foto(fotos[0]?.arquivo ?? "retrato", [0.5, 0.12]),
-    veu(0, 620, "fundoClaro", 0.97, 10, 1350, "cima"),
-    veu(1090, 260, "fundoClaro", 0.97, 11),
+  // Capa: foto limpa no alto; título claro, itálico e encorpado na base, sobre véu escuro (leitura em qualquer foto).
+  const capa = tela("escuro", "capa", [
+    foto(fotos[0]?.arquivo ?? "retrato", [0.5, 0.75]),
+    veu(0, 220, "fundoEscuro", 0.7, 10, 1350, "cima"),
+    veu(600, 750, "fundoEscuro", 0.96, 11),
     ...marcaTopo(1),
-    T.rotulo(f.ficha.medico.especialidade.toUpperCase(), cx(M, 196, span(12), 26, 50), { tamanho: 18, tracking: 0.24, ajuste: "largura" }),
-    T.titulo(r.capa.titulo, cx(M, 240, span(12), 250, 50), { tamanho: 62, peso: "leve", entrelinha: 1.16 }),
+    T.titulo(r.capa.titulo, cx(M, 892, span(9), 300, 50), { tamanho: 64, peso: "forte", italico: true, entrelinha: 1.16, sombra: true, vertical: "topo" }),
     ...rodape(f),
   ]);
 
