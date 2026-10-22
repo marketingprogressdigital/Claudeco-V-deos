@@ -104,7 +104,7 @@ function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<
     veu(1090, 260, "fundoClaro", 0.97, 11),
     ...marcaTopo(1),
     T.rotulo(f.ficha.medico.especialidade.toUpperCase(), cx(M, 196, span(12), 26, 50), { tamanho: 18, tracking: 0.24, ajuste: "largura" }),
-    T.titulo(r.capa.titulo, cx(M, 240, span(12), 250, 50), { tamanho: 62, peso: "leve", entrelinha: 1.08 }),
+    T.titulo(r.capa.titulo, cx(M, 240, span(12), 250, 50), { tamanho: 62, peso: "leve", entrelinha: 1.16 }),
     ...rodape(f),
   ]);
 
@@ -118,7 +118,7 @@ function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<
       ...marcaTopo(i + 2),
       T.rotulo(n, cx(M, 330, span(12), 30, 50), { tamanho: 22, tracking: 0.3, alinhar: "centro", ajuste: "nenhum" }),
       forma("linha", cx((W - 56) / 2, 378, 56, 2, 50), "textoAuto", 0.5),
-      T.titulo(it.titulo, cx(M, 410, span(12), 360, 50), { tamanho: 92, peso: "leve", alinhar: "centro", vertical: "base", entrelinha: 1.04 }),
+      T.titulo(it.titulo, cx(M, 410, span(12), 360, 50), { tamanho: 92, peso: "leve", alinhar: "centro", vertical: "base", entrelinha: 1.16 }),
       T.corpo(it.texto, cx(col(1), 820, span(10), 300, 50), { tamanho: 34, alinhar: "centro", entrelinha: 1.45 }),
       ...rodape(f),
     ]);
@@ -135,7 +135,7 @@ function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<
     ? tela("escuro", "conclusao", [
         atmosfera("noturno", [0.5, 0.55], 0.08),
         ...marcaTopo(total),
-        T.titulo(r.conclusao, cx(M, 170, span(12), 230, 50), { tamanho: 64, peso: "leve", alinhar: "centro", vertical: "meio", entrelinha: 1.06 }),
+        T.titulo(r.conclusao, cx(M, 170, span(12), 230, 50), { tamanho: 64, peso: "leve", alinhar: "centro", vertical: "meio", entrelinha: 1.16 }),
         ...polaroide(r.comparativo.antes, "antes", 90, 470, -4),
         ...polaroide(r.comparativo.depois, "depois", 570, 450, 3),
         T.corpo("Cada caso é avaliado individualmente.", cx(M, 1056, span(12), 40, 50), { tamanho: 24, alinhar: "centro", vertical: "meio" }),
@@ -146,14 +146,14 @@ function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<
         foto(fotoFinal, [0.5, 0.15]),
         veu(560, 790, "fundoEscuro", 0.95, 10),
         ...marcaTopo(total),
-        T.titulo(r.conclusao, cx(M, 860, span(12), 300, 50), { tamanho: 76, peso: "leve", entrelinha: 1.06 }),
+        T.titulo(r.conclusao, cx(M, 860, span(12), 300, 50), { tamanho: 76, peso: "leve", entrelinha: 1.16 }),
         ...rodape(f),
       ])
     : tela("claro", "conclusao", [
         atmosfera("editorial", [0.5, 0.3], 0.06),
         numeracao(total, total, 20),
         logo((W - 150) / 2, 300, 150, 100),
-        T.titulo(r.conclusao, cx(M, 470, span(12), 420, 50), { tamanho: 92, peso: "leve", alinhar: "centro", vertical: "meio", entrelinha: 1.04 }),
+        T.titulo(r.conclusao, cx(M, 470, span(12), 420, 50), { tamanho: 92, peso: "leve", alinhar: "centro", vertical: "meio", entrelinha: 1.16 }),
         forma("linha", cx((W - 56) / 2, 930, 56, 2, 50), "textoAuto", 0.5),
         ...rodape(f),
       ]);
