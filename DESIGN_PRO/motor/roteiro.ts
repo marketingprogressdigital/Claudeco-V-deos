@@ -61,6 +61,8 @@ export const ROTEIROS = {
     capa: z.object({ palavra: t(10), titulo: comDestaque(80) }),
     itens: z.array(z.object({ titulo: t(45), texto: comDestaque(170) })).min(3).max(5),
     conclusao: comDestaque(110),
+    /** Variação D: duas fotos autorizadas em polaroide na conclusão (caminhos relativos à pasta da marca). */
+    comparativo: z.object({ antes: z.string().regex(/^fotos\/[\w.]+$/), depois: z.string().regex(/^fotos\/[\w.]+$/) }).optional(),
   }),
   10: z.object({
     ...base,

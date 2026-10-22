@@ -4,13 +4,14 @@
  */
 import type { Camada, Plano, Tela } from "../plano.js";
 import type { Roteiro } from "../roteiro.js";
-import { atmosfera, cx, efeito, fechamentoAcoes, forma, icone, logo, M, medico, numeracao, rodape, span, T, tela, veu, vidro, W, type Gerador } from "./comum.js";
+import { atmosfera, col, cx, efeito, fechamentoAcoes, forma, icone, logo, M, medico, numeracao, rodape, span, T, tela, veu, vidro, W, type Gerador } from "./comum.js";
 
 /** Foto da ficha por índice (retratos), ou o retrato padrão. */
 const retrato = (fotos: string[], i: number) => fotos[i % Math.max(1, fotos.length)] ?? "retrato";
 
 /* ---------- MODELO 9 · Lista numerada (5 a 8 telas) ---------- */
 export const m09: Gerador<Roteiro<9>> = (r, f, v, luz) => {
+  if (v === "D") return m09D(r, f);
   const total = r.itens.length + 3;
   const fotos = f.ficha.fotos.retratos.map((x) => x.arquivo);
   const capaEscura = v === "B";
@@ -84,6 +85,81 @@ export const m09: Gerador<Roteiro<9>> = (r, f, v, luz) => {
     notas: [`Ritmo: ${fundoCapa}, itens ${v === "C" ? "claros" : "alternando escuro e claro"}, conclusão na principal, fechamento escuro`],
   };
 };
+
+/**
+ * Modelo 9, variação D: capa e conclusão com foto inteira (sem recorte, funciona fora do Mac), itens só tipográficos
+ * e centralizados em fundos alternados, sem tela extra de ações: capa + itens + conclusão. "capa.palavra" não é usada.
+ * Fotos: retrato 0 na capa; retrato 1 na conclusão, se existir (senão a conclusão é tipográfica com o monograma).
+ */
+function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<Gerador<Roteiro<9>>> {
+  const total = r.itens.length + 2;
+  const fotos = f.ficha.fotos.retratos;
+  const foto = (arquivo: string, foco: [number, number]): Camada => ({ tipo: "foto", foto: arquivo, caixa: cx(0, 0, W, 1350, 1), tratamento: { gradacao: true, tingimento: 0, duotom: false, pb: false, desfoque: 0, opacidade: 1, ajuste: "cobrir", foco } });
+  const marcaTopo = (i: number): Camada[] => [logo(M, M, 66, 44), numeracao(i, total, 20)];
+
+  // Capa clara: véu claro no topo (título) e na base (assinatura), foto viva no meio.
+  const capa = tela("claro", "capa", [
+    foto(fotos[0]?.arquivo ?? "retrato", [0.5, 0.12]),
+    veu(0, 620, "fundoClaro", 0.97, 10, 1350, "cima"),
+    veu(1090, 260, "fundoClaro", 0.97, 11),
+    ...marcaTopo(1),
+    T.rotulo(f.ficha.medico.especialidade.toUpperCase(), cx(M, 196, span(12), 26, 50), { tamanho: 18, tracking: 0.24, ajuste: "largura" }),
+    T.titulo(r.capa.titulo, cx(M, 240, span(12), 250, 50), { tamanho: 62, peso: "leve", entrelinha: 1.08 }),
+    ...rodape(f),
+  ]);
+
+  // Com comparativo a conclusão é escura, então o último item não pode ser escuro.
+  const ciclo = r.comparativo ? (["escuro", "claro", "principal", "claro", "escuro"] as const) : (["escuro", "claro", "principal", "escuro", "claro"] as const);
+  const itens: Tela[] = r.itens.map((it, i) => {
+    const n = String(i + 1).padStart(2, "0");
+    const fundo = ciclo[i % ciclo.length]!;
+    return tela(fundo, `item ${i + 1}`, [
+      atmosfera(fundo === "escuro" ? "noturno" : fundo === "principal" ? "cor" : "editorial", [0.5, 0.35], 0.06),
+      ...marcaTopo(i + 2),
+      T.rotulo(n, cx(M, 330, span(12), 30, 50), { tamanho: 22, tracking: 0.3, alinhar: "centro", ajuste: "nenhum" }),
+      forma("linha", cx((W - 56) / 2, 378, 56, 2, 50), "textoAuto", 0.5),
+      T.titulo(it.titulo, cx(M, 410, span(12), 360, 50), { tamanho: 92, peso: "leve", alinhar: "centro", vertical: "base", entrelinha: 1.04 }),
+      T.corpo(it.texto, cx(col(1), 820, span(10), 300, 50), { tamanho: 34, alinhar: "centro", entrelinha: 1.45 }),
+      ...rodape(f),
+    ]);
+  });
+
+  const polaroide = (arquivo: string, legenda: string, x: number, y: number, giro: number): Camada[] => [
+    efeito("desfoqueProfundidade", cx(x + 30, y + 40, 400, 520, 20, giro), { desfoque: 30, opacidade: 0.55 }),
+    forma("faixa", cx(x, y, 420, 540, 21, giro), "fundoClaro"),
+    { tipo: "foto", foto: arquivo, caixa: cx(x + 22, y + 22, 376, 420, 22, giro), tratamento: { gradacao: true, tingimento: 0, duotom: false, pb: false, desfoque: 0, opacidade: 1, ajuste: "cobrir", foco: [0.5, 0.35] } },
+    T.subtitulo(legenda, cx(x + 22, y + 456, 376, 64, 23, giro), { tamanho: 44, cor: "fundoEscuro", alinhar: "centro", vertical: "meio", ajuste: "nenhum" }),
+  ];
+  const fotoFinal = fotos[1]?.arquivo;
+  const conclusao = r.comparativo
+    ? tela("escuro", "conclusao", [
+        atmosfera("noturno", [0.5, 0.55], 0.08),
+        ...marcaTopo(total),
+        T.titulo(r.conclusao, cx(M, 170, span(12), 230, 50), { tamanho: 64, peso: "leve", alinhar: "centro", vertical: "meio", entrelinha: 1.06 }),
+        ...polaroide(r.comparativo.antes, "antes", 90, 470, -4),
+        ...polaroide(r.comparativo.depois, "depois", 570, 450, 3),
+        T.corpo("Cada caso é avaliado individualmente.", cx(M, 1056, span(12), 40, 50), { tamanho: 24, alinhar: "centro", vertical: "meio" }),
+        ...rodape(f),
+      ])
+    : fotoFinal
+    ? tela("imagem", "conclusao", [
+        foto(fotoFinal, [0.5, 0.15]),
+        veu(560, 790, "fundoEscuro", 0.95, 10),
+        ...marcaTopo(total),
+        T.titulo(r.conclusao, cx(M, 860, span(12), 300, 50), { tamanho: 76, peso: "leve", entrelinha: 1.06 }),
+        ...rodape(f),
+      ])
+    : tela("claro", "conclusao", [
+        atmosfera("editorial", [0.5, 0.3], 0.06),
+        numeracao(total, total, 20),
+        logo((W - 150) / 2, 300, 150, 100),
+        T.titulo(r.conclusao, cx(M, 470, span(12), 420, 50), { tamanho: 92, peso: "leve", alinhar: "centro", vertical: "meio", entrelinha: 1.04 }),
+        forma("linha", cx((W - 56) / 2, 930, 56, 2, 50), "textoAuto", 0.5),
+        ...rodape(f),
+      ]);
+
+  return { modelo: 9, variacao: "D", formato: "4x5", telas: [capa, ...itens, conclusao], notas: ["variação D: fotos inteiras sem recorte; itens tipográficos alternando escuro, claro e principal"] };
+}
 
 /* ---------- MODELO 7 · Carrossel educativo (7 telas) ---------- */
 export const m07: Gerador<Roteiro<7>> = (r, f, v, luz) => {

@@ -277,7 +277,10 @@
       "precisa_foto_medico": true,
       "cenas": [
         "TEXTURA_FIOS"
-      ]
+      ],
+      "variacoes": {
+        "D": "fotos inteiras na capa e conclusão, itens tipográficos"
+      }
     },
     {
       "id": 10,

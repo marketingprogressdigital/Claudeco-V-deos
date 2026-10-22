@@ -1,0 +1,92 @@
+{
+  "_sobre": "Ficha montada em 2026-10-22 a partir do Drive (DRA. WILMA VIVIANE: IDV atualizado, LOGOS, papel timbrado) e do Canva (IDENTIDADE VISUAL e FEED WILMA). Paleta oficial: #10100F, #E6E6E3, #C7C5BB, #A5A4A0, #88837B, #857A72. Logo: Cocomat Light (nome) e Montserrat (assinatura), lidas do PDF do logo. Feed usa serifada itálica de destaque e sans em caixa alta espaçada: títulos em Playfair Display (equivalente licenciada da serifada do feed) e texto em Montserrat (fonte oficial). CRM 15.554/PB no papel timbrado. RQE não aparece em nenhum material (confirmar). Monograma off-white gerado a partir do PNG oficial preto, só trocando a cor.",
+  "ficticia": false,
+  "aprovada": false,
+  "medico": {
+    "tratamento": "Dra",
+    "nome": "Wilma Viviane",
+    "crm": "15.554",
+    "uf": "PB",
+    "especialidade": "Tricologia e Transplante Capilar",
+    "instagram": "@dra.wilmaviviane",
+    "cidade": "João Pessoa (PB)"
+  },
+  "cores": {
+    "principal": "#C7C5BB",
+    "apoio": "#88837B",
+    "fundoClaro": "#E6E6E3",
+    "fundoEscuro": "#10100F",
+    "textoSobreClaro": "#10100F",
+    "textoSobreEscuro": "#E6E6E3",
+    "acento": "#857A72"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Playfair Display",
+      "arquivos": [
+        "assets/fontes/playfair_display"
+      ],
+      "pesoForte": 500,
+      "pesoLeve": 400,
+      "temItalico": true,
+      "caixaAlta": false,
+      "tracking": 0
+    },
+    "texto": {
+      "familia": "Montserrat",
+      "arquivos": [
+        "assets/fontes/montserrat"
+      ],
+      "pesoNormal": 400,
+      "pesoForte": 600
+    }
+  },
+  "estilo": {
+    "clima": "seguro, acessível e objetivo; autoridade sem distanciamento; editorial e sóbrio",
+    "luz": "suave",
+    "temperatura": "neutra",
+    "raio": 0,
+    "textura": "grao",
+    "elementos": [
+      "monograma W com fio",
+      "serifada itálica de destaque",
+      "rótulos em caixa alta espaçada",
+      "linhas finas"
+    ],
+    "preferenciaFundo": "alternado",
+    "evitar": [
+      "antes e depois",
+      "promessa de resultado",
+      "neon",
+      "cores fora da paleta neutra"
+    ],
+    "destaqueFraco": "marcaTexto"
+  },
+  "logo": {
+    "paraFundoClaro": "assets/monograma_preto.png",
+    "paraFundoEscuro": "assets/monograma_offwhite.png",
+    "paraFundoPrincipal": "assets/monograma_preto.png",
+    "monograma": "W"
+  },
+  "fotos": {
+    "retratos": [
+      {
+        "arquivo": "fotos/capa_avaliacao_paciente.jpg",
+        "enquadramento": "cintura",
+        "olhar": "lado",
+        "luz": "frontal",
+        "fundoOriginal": "consultório com parede clara e ar condicionado; paciente identificável em primeiro plano",
+        "aprovada": true
+      }
+    ],
+    "atendimento": [],
+    "detalhe": [],
+    "equipe": [],
+    "clinica": []
+  },
+  "referenciasVisuais": [
+    "Canva: IDENTIDADE VISUAL - Dra. Wilma Viviane (DAHQyAU5nlU)",
+    "Canva: FEED WILMA (DAHRbfbD63E)",
+    "Drive: IDV - atualizado.pdf"
+  ]
+}

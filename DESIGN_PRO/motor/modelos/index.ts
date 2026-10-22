@@ -14,7 +14,7 @@ export const modelosDisponiveis = () => Object.keys(GERADORES).map(Number);
 export function gerarPlano(modelo: number, roteiro: Roteiro, f: FichaCarregada, variacao: "A" | "B" | "C" | "D", luz: "esquerda" | "direita"): Omit<Plano, "luz"> {
   const g = GERADORES[modelo] as Gerador<Roteiro> | undefined;
   if (!g) throw new UserError(`Modelo ${modelo} ainda não tem gerador no motor novo`, [`Disponíveis: ${modelosDisponiveis().join(", ")}`]);
-  if (variacao === "D" && modelo !== 5) throw new UserError(`A variação D só existe no Modelo 5`);
+  if (variacao === "D" && modelo !== 5 && modelo !== 9) throw new UserError(`A variação D só existe nos Modelos 5 e 9`);
   const p = g(roteiro, f, variacao, luz);
   return { ...p, continuidade: p.continuidade ?? [], notas: p.notas ?? [] };
 }
