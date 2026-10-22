@@ -79,7 +79,24 @@
         "aprovada": true
       }
     ],
-    "atendimento": [],
+    "atendimento": [
+      {
+        "arquivo": "fotos/comparativo_antes_topo.jpg",
+        "enquadramento": "busto",
+        "olhar": "lado",
+        "luz": "frontal",
+        "fundoOriginal": "parede clara; paciente visto de cima, antes do procedimento (recorte da foto enviada no chat em 2026-10-22)",
+        "aprovada": false
+      },
+      {
+        "arquivo": "fotos/comparativo_depois_frente.jpg",
+        "enquadramento": "busto",
+        "olhar": "camera",
+        "luz": "frontal",
+        "fundoOriginal": "painel Neofolic; paciente de frente, depois do procedimento (recorte da foto enviada no chat em 2026-10-22); ângulo diferente do antes",
+        "aprovada": false
+      }
+    ],
     "detalhe": [],
     "equipe": [],
     "clinica": []

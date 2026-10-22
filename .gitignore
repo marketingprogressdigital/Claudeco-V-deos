@@ -6,3 +6,6 @@ DESIGN_PRO/.ferramentas/
 DESIGN_PRO/motor/cache/
 .env
 .DS_Store
+
+# Fotos de paciente: só entram no repositório com autorização de imagem confirmada
+DESIGN_PRO/marcas/*/fotos/comparativo_*

@@ -4,19 +4,43 @@
   "variacao": "D",
   "tema": "planejamento do transplante olha o caso inteiro",
   "roteiro": {
-    "capa": { "palavra": "Planejar", "titulo": "Seu transplante não deveria ser planejado olhando apenas para a *área sem cabelo*." },
+    "capa": {
+      "palavra": "Planejar",
+      "titulo": "Seu transplante não deveria ser planejado olhando apenas para a *área sem cabelo*."
+    },
     "itens": [
-      { "titulo": "Existe uma *história* por trás daquela região.", "texto": "A queda, a evolução da calvície e as características do cabelo precisam ser entendidas antes de definir qualquer estratégia." },
-      { "titulo": "Existe uma *área doadora*.", "texto": "Ela possui quantidade, densidade e características próprias que precisam ser respeitadas." },
-      { "titulo": "Existe um *rosto*.", "texto": "A linha frontal precisa conversar com proporções, idade e características faciais." },
-      { "titulo": "E existe um *futuro*.", "texto": "O planejamento também precisa considerar como a calvície pode evoluir ao longo dos anos." }
+      {
+        "titulo": "Existe uma *história* por trás daquela região.",
+        "texto": "A queda, a evolução da calvície e as características do cabelo precisam ser entendidas antes de definir qualquer estratégia."
+      },
+      {
+        "titulo": "Existe uma *área doadora*.",
+        "texto": "Ela possui quantidade, densidade e características próprias que precisam ser respeitadas."
+      },
+      {
+        "titulo": "Existe um *rosto*.",
+        "texto": "A linha frontal precisa conversar com proporções, idade e características faciais."
+      },
+      {
+        "titulo": "E existe um *futuro*.",
+        "texto": "O planejamento também precisa considerar como a calvície pode evoluir ao longo dos anos."
+      }
     ],
     "conclusao": "Um transplante bem planejado olha para o *caso inteiro*.",
     "legenda": {
       "gancho": "Seu transplante não deveria ser planejado olhando apenas para a área sem cabelo.",
       "corpo": "Existe uma história por trás daquela região, uma área doadora com limites próprios, um rosto com proporções únicas e um futuro, porque a calvície pode evoluir ao longo dos anos. Um transplante bem planejado olha para o caso inteiro. Cada caso é avaliado individualmente.",
       "cta": "Salve este carrossel e envie para quem está pensando em transplante.",
-      "hashtags": ["#transplantecapilar", "#tricologia", "#calvicie", "#joaopessoa"]
+      "hashtags": [
+        "#transplantecapilar",
+        "#tricologia",
+        "#calvicie",
+        "#joaopessoa"
+      ]
+    },
+    "comparativo": {
+      "antes": "fotos/comparativo_antes_topo.jpg",
+      "depois": "fotos/comparativo_depois_frente.jpg"
     }
   }
 }
