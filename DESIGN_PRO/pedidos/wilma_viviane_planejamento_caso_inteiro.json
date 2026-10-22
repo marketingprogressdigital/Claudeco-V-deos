@@ -42,5 +42,6 @@
       "antes": "fotos/comparativo_antes_topo_fundo_cinza.jpg",
       "depois": "fotos/comparativo_depois_frente_fundo_cinza.jpg"
     }
-  }
+  },
+  "versao": "final"
 }

@@ -1,7 +1,7 @@
 {
   "_sobre": "Ficha montada em 2026-10-22 a partir do Drive (DRA. WILMA VIVIANE: IDV atualizado, LOGOS, papel timbrado) e do Canva (IDENTIDADE VISUAL e FEED WILMA). Paleta oficial: #10100F, #E6E6E3, #C7C5BB, #A5A4A0, #88837B, #857A72. Logo: Cocomat Light (nome) e Montserrat (assinatura), lidas do PDF do logo. Feed usa serifada itálica de destaque e sans em caixa alta espaçada: títulos em Playfair Display (equivalente licenciada da serifada do feed) e texto em Montserrat (fonte oficial). CRM 15.554/PB no papel timbrado. RQE não aparece em nenhum material (confirmar). Monograma off-white gerado a partir do PNG oficial preto, só trocando a cor.",
   "ficticia": false,
-  "aprovada": false,
+  "aprovada": true,
   "medico": {
     "tratamento": "Dra",
     "nome": "Wilma Viviane",
@@ -86,7 +86,7 @@
         "olhar": "lado",
         "luz": "frontal",
         "fundoOriginal": "parede clara; paciente visto de cima, antes do procedimento (recorte da foto enviada no chat em 2026-10-22); fundo removido localmente e trocado pelo cinza #A5A4A0",
-        "aprovada": false
+        "aprovada": true
       },
       {
         "arquivo": "fotos/comparativo_depois_frente_fundo_cinza.jpg",
@@ -94,7 +94,7 @@
         "olhar": "camera",
         "luz": "frontal",
         "fundoOriginal": "painel Neofolic; paciente de frente, depois do procedimento (recorte da foto enviada no chat em 2026-10-22); ângulo diferente do antes; fundo removido localmente e trocado pelo cinza #A5A4A0",
-        "aprovada": false
+        "aprovada": true
       }
     ],
     "detalhe": [],
@@ -105,5 +105,11 @@
     "Canva: IDENTIDADE VISUAL - Dra. Wilma Viviane (DAHQyAU5nlU)",
     "Canva: FEED WILMA (DAHRbfbD63E)",
     "Drive: IDV - atualizado.pdf"
-  ]
+  ],
+  "_aprovacao": {
+    "data": "2026-10-22",
+    "por": "João (Neo Group), no chat",
+    "escopo": "ficha, capa e card 6 com comparativo em polaroide",
+    "observacoes": "Aprovado após aviso sobre autorização de imagem dos pacientes (capa e comparativo), diferença de ângulo entre antes e depois e RQE não localizado."
+  }
 }
