@@ -1,0 +1,20 @@
+{
+  "medico": "emanuele_barreto",
+  "modelo": 5,
+  "variacao": "D",
+  "tema": "procedimentos capilares",
+  "roteiro": {
+    "selo": "Procedimentos capilares",
+    "titulo": "Cada fio tem um *caminho*.",
+    "subtitulo": "Os procedimentos que realizo. Cada caso é avaliado individualmente.",
+    "lista": ["Transplante capilar", "Transplante long hair", "Transplante de sobrancelha", "Transplante de barba"],
+    "informacoes": [{ "icone": "local", "texto": "Irecê (BA)" }],
+    "botao": "Agende sua avaliação",
+    "legenda": {
+      "gancho": "Nem toda queda pede o mesmo caminho.",
+      "corpo": "Transplante capilar, long hair, sobrancelha e barba: cada procedimento tem indicação própria, e é a avaliação que define o plano para você. Antes de cuidar dos seus fios, eu quero entender você. Cada caso é avaliado individualmente.",
+      "cta": "Chame no direct e agende sua avaliação em Irecê.",
+      "hashtags": ["#transplantecapilar", "#tricologia", "#saudecapilar", "#irece"]
+    }
+  }
+}

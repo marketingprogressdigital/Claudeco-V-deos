@@ -1,0 +1,106 @@
+{
+  "_sobre": "Ficha montada em 2026-10-22 a partir do Drive (EMANUELE BARRETO > MATERIAIS PARA ENVIO: IDENTIDADE VISUAL com LEIA-ME, logos e papel timbrado; FOTOS > FOTOS PROFISSIONAIS) e do Canva (design 'EMANUELE BARRETO', páginas de paleta e posts do feed). Cores do manual: marinho #1B2A4A, marinho profundo #111C33, azul névoa #5B6B8A, off-white #F5F1EA, champagne #C9B79C (detalhe, nunca sobre branco). Fontes dos posts no Canva: Playfair Display (títulos, itálico no destaque) e Poppins (texto), ambas OFL na biblioteca. CRM-BA 42182 consta no cartão de visita e no papel timbrado; nenhum material traz RQE, por isso o campo fica de fora (confirmar com a médica).",
+  "ficticia": false,
+  "aprovada": false,
+  "medico": {
+    "tratamento": "Dra",
+    "nome": "Emanuele Barreto",
+    "crm": "42182",
+    "uf": "BA",
+    "especialidade": "Transplante Capilar",
+    "instagram": "@dra.emanuelebarreto",
+    "cidade": "Irecê (BA)"
+  },
+  "cores": {
+    "principal": "#C9B79C",
+    "apoio": "#5B6B8A",
+    "fundoClaro": "#F5F1EA",
+    "fundoEscuro": "#111C33",
+    "textoSobreClaro": "#1B2A4A",
+    "textoSobreEscuro": "#FFFFFF",
+    "acento": "#C9B79C"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Playfair Display",
+      "arquivos": [
+        "assets/fontes/playfair_display"
+      ],
+      "pesoForte": 500,
+      "pesoLeve": 400,
+      "temItalico": true,
+      "caixaAlta": false,
+      "tracking": 0
+    },
+    "texto": {
+      "familia": "Poppins",
+      "arquivos": [
+        "assets/fontes/poppins"
+      ],
+      "pesoNormal": 400,
+      "pesoForte": 600
+    }
+  },
+  "estilo": {
+    "clima": "humanizado, técnico e moderno; acolhedor e honesto, sem promessa",
+    "luz": "suave",
+    "temperatura": "fria",
+    "raio": 40,
+    "textura": "grao",
+    "elementos": [
+      "foto de estúdio em fundo marinho",
+      "pílula champagne",
+      "itálico no destaque",
+      "monograma EB"
+    ],
+    "preferenciaFundo": "escuro",
+    "evitar": [
+      "antes e depois",
+      "promessa de resultado",
+      "neon",
+      "champagne sobre branco"
+    ]
+  },
+  "logo": {
+    "paraFundoClaro": "assets/monograma_marinho.png",
+    "paraFundoEscuro": "assets/monograma_champagne.png",
+    "paraFundoPrincipal": "assets/monograma_marinho.png",
+    "monograma": "EB"
+  },
+  "fotos": {
+    "retratos": [
+      {
+        "arquivo": "fotos/retrato_casaco_abrindo.jpg",
+        "enquadramento": "cintura",
+        "olhar": "camera",
+        "luz": "esquerda",
+        "fundoOriginal": "estúdio marinho texturizado",
+        "aprovada": true
+      },
+      {
+        "arquivo": "fotos/retrato_casaco_braco.jpg",
+        "enquadramento": "cintura",
+        "olhar": "camera",
+        "luz": "esquerda",
+        "fundoOriginal": "estúdio marinho texturizado",
+        "aprovada": true
+      },
+      {
+        "arquivo": "fotos/retrato_casaco_mao_rosto.jpg",
+        "enquadramento": "busto",
+        "olhar": "camera",
+        "luz": "frontal",
+        "fundoOriginal": "estúdio marinho texturizado",
+        "aprovada": true
+      }
+    ],
+    "atendimento": [],
+    "detalhe": [],
+    "equipe": [],
+    "clinica": []
+  },
+  "referenciasVisuais": [
+    "Canva: EMANUELE BARRETO (DAHYA6CH6bk)",
+    "Drive: IDENTIDADE VISUAL/LEIA-ME.txt"
+  ]
+}

@@ -144,7 +144,7 @@ export type ElementoContinuo = z.infer<typeof ElementoContinuo>;
 
 export const Plano = z.object({
   modelo: z.number().int().min(1).max(12),
-  variacao: z.enum(["A", "B", "C"]),
+  variacao: z.enum(["A", "B", "C", "D"]),
   formato: z.enum(["4x5", "9x16"]),
   /** direção da luz do post (B2, princípio 3) */
   luz: z.enum(["esquerda", "direita", "frontal"]).default("esquerda"),

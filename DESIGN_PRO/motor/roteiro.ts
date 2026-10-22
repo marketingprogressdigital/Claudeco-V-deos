@@ -32,6 +32,8 @@ export const ROTEIROS = {
     titulo: comDestaque(40),
     subtitulo: t(90),
     informacoes: z.array(z.object({ icone: z.enum(["calendario", "local", "whatsapp"]), texto: t(40) })).min(1).max(3),
+    /** Variação D: procedimentos ou itens curtos listados sobre a foto. */
+    lista: z.array(t(32)).min(2).max(6).optional(),
     botao: t(26),
   }),
   6: z.object({ ...base, palavra: t(12), complemento: comDestaque(50), selo: t(24).optional() }),

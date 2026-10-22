@@ -11,7 +11,7 @@ import { UserError } from "./infra/errors.js";
 export const Pedido = z.object({
   medico: z.string().regex(/^[a-z0-9_-]+$/),
   modelo: z.number().int().min(1).max(12).optional(),
-  variacao: z.enum(["A", "B", "C"]).optional(),
+  variacao: z.enum(["A", "B", "C", "D"]).optional(),
   tema: z.string().min(3),
   objetivo: z.string().optional(),
   observacoes: z.string().optional(),
@@ -39,7 +39,7 @@ export async function catalogo(): Promise<Catalogo> {
 }
 
 /** Escolhe o modelo pelo objetivo (tabela do catálogo) quando o pedido não indica; registra o motivo. */
-export async function resolverModelo(p: Pedido): Promise<{ modelo: number; variacao: "A" | "B" | "C"; motivo: string }> {
+export async function resolverModelo(p: Pedido): Promise<{ modelo: number; variacao: "A" | "B" | "C" | "D"; motivo: string }> {
   if (p.modelo) return { modelo: p.modelo, variacao: p.variacao ?? "A", motivo: "indicado no pedido" };
   const cat = await catalogo();
   const obj = (p.objetivo ?? "").toLowerCase();

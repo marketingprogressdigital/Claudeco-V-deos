@@ -4,6 +4,7 @@
 import type { FichaCarregada } from "../ficha.js";
 import type { Camada } from "../plano.js";
 import type { Roteiro } from "../roteiro.js";
+import { UserError } from "../infra/errors.js";
 import { assinaturaTexto, atmosfera, col, cx, efeito, forma, icone, imagem, logo, M, medico, rodape, span, T, tela, veu, vidro, W, type Gerador } from "./comum.js";
 
 const escuroPreferido = (f: FichaCarregada) => f.ficha.estilo.preferenciaFundo !== "claro";
@@ -249,6 +250,36 @@ export const m05: Gerador<Roteiro<5>> = (r, f, v, luz) => {
         ...botao(r.botao, M + 30, 1050 - 0, 400),
         ...rodape(f),
       ])],
+    };
+  }
+  if (v === "D") {
+    // Foto sangrada da médica (sem recorte), véu escuro na base e lista de itens em duas colunas.
+    if (!r.lista) throw new UserError("Modelo 5 variação D precisa de \"lista\" no roteiro (2 a 6 itens)");
+    const linhas = Math.ceil(r.lista.length / 2);
+    const yLista = 1080 - linhas * 58;
+    const yTitulo = yLista - 350;
+    const local = r.informacoes[0]!;
+    return {
+      modelo: 5, variacao: "D", formato: "4x5",
+      telas: [tela("imagem", "convite", [
+        { tipo: "foto", foto: "retrato", caixa: cx(0, -140, W, 1490, 1), tratamento: { gradacao: true, tingimento: 0, duotom: false, pb: false, desfoque: 0, opacidade: 1, ajuste: "cobrir", foco: [0.5, 0] } },
+        veu(yTitulo - 300, 1350 - yTitulo + 300, "fundoEscuro", 0.97, 10),
+        veu(0, 260, "fundoEscuro", 0.55, 11, 1350, "cima"),
+        logo(),
+        ...pilula(r.selo, M, yTitulo - 70, 360, "escuro", 55, "esquerda"),
+        T.titulo(r.titulo, cx(M, yTitulo, span(11), 200, 50), { tamanho: 88, sombra: true }),
+        T.corpo(r.subtitulo, cx(M, yTitulo + 210, span(11), 90, 50), { tamanho: 28 }),
+        forma("linha", cx(M, yLista - 26, span(12), 1.5, 50), "principal", 0.5),
+        ...r.lista.flatMap((item, i) => {
+          const x = i % 2 === 0 ? M : col(6), y = yLista + Math.floor(i / 2) * 58;
+          return [icone("check", cx(x, y + 4, 36, 36, 52), "nenhum"), T.corpo(item, cx(x + 52, y, span(6) - 60, 44, 52), { tamanho: 30, peso: "forte", vertical: "meio", ajuste: "largura" })] as Camada[];
+        }),
+        ...botao(r.botao, M, 1100, 520),
+        icone(local.icone, cx(M + 560, 1114, 44, 44, 55), "nenhum"),
+        T.corpo(local.texto, cx(M + 614, 1110, span(12) - 614, 52, 55), { tamanho: 24, vertical: "meio", ajuste: "largura" }),
+        ...rodape(f),
+      ])],
+      notas: ["variação D: foto profissional inteira, sem recorte; funciona fora do Mac"],
     };
   }
   return {

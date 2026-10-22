@@ -102,4 +102,4 @@ export function fechamentoAcoes(f: FichaCarregada, total: number, titulo = "Gost
   return tela("escuro", "fechamento", cam);
 }
 
-export type Gerador<R> = (r: R, f: FichaCarregada, variacao: "A" | "B" | "C", luz: "esquerda" | "direita") => Omit<Plano, "luz" | "notas" | "continuidade"> & { notas?: string[]; continuidade?: Plano["continuidade"] };
+export type Gerador<R> = (r: R, f: FichaCarregada, variacao: "A" | "B" | "C" | "D", luz: "esquerda" | "direita") => Omit<Plano, "luz" | "notas" | "continuidade"> & { notas?: string[]; continuidade?: Plano["continuidade"] };
