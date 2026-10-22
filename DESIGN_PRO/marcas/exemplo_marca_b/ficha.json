@@ -1,0 +1,68 @@
+{
+  "_sobre": "Marca fictícia de teste: Editorial nude. Não é um médico real.",
+  "ficticia": true,
+  "aprovada": true,
+  "medico": {
+    "tratamento": "Dra",
+    "nome": "Nome Exemplo",
+    "crm": "00000",
+    "uf": "SP",
+    "rqe": "00000",
+    "especialidade": "Transplante Capilar",
+    "instagram": "@perfil.exemplo",
+    "cidade": "Cidade Exemplo"
+  },
+  "cores": {
+    "principal": "#8A5A3C",
+    "apoio": "#C7A487",
+    "fundoClaro": "#F6EFE8",
+    "fundoEscuro": "#3B2A21",
+    "textoSobreClaro": "#3B2A21",
+    "textoSobreEscuro": "#F6EFE8"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Cormorant Garamond",
+      "arquivos": [
+        "assets/fontes/cormorant_garamond"
+      ],
+      "pesoForte": 600,
+      "pesoLeve": 400,
+      "temItalico": true,
+      "caixaAlta": false,
+      "tracking": 0
+    },
+    "texto": {
+      "familia": "Montserrat",
+      "arquivos": [
+        "assets/fontes/montserrat"
+      ],
+      "pesoNormal": 400,
+      "pesoForte": 600
+    }
+  },
+  "estilo": {
+    "clima": "editorial acolhedor feminino",
+    "luz": "suave",
+    "temperatura": "quente",
+    "raio": 6,
+    "textura": "papel",
+    "elementos": [
+      "linhas finas",
+      "arcos",
+      "fios de luz"
+    ],
+    "preferenciaFundo": "claro",
+    "evitar": []
+  },
+  "logo": {},
+  "fotos": {
+    "retratos": [],
+    "atendimento": [],
+    "detalhe": [],
+    "equipe": [],
+    "clinica": []
+  },
+  "observacao_fotos": "Sem fotos reais. Para testes, gere um retrato de pessoa fictícia anônima de jaleco, marcado como fictício, conforme a referência G4.",
+  "referenciasVisuais": []
+}

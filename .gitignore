@@ -1,0 +1,8 @@
+node_modules/
+DESIGN_PRO/saida/*
+!DESIGN_PRO/saida/.gitkeep
+DESIGN_PRO/backups/
+DESIGN_PRO/.ferramentas/
+DESIGN_PRO/motor/cache/
+.env
+.DS_Store

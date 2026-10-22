@@ -1,0 +1,46 @@
+{
+  "base": "Resolução CFM 2.336/2023",
+  "proibidos": [
+    "garantido",
+    "garantida",
+    "100%",
+    "definitivo",
+    "definitiva",
+    "sem dor",
+    "indolor",
+    "o melhor",
+    "a melhor",
+    "o único",
+    "a única",
+    "resultado certo",
+    "nunca mais",
+    "milagre",
+    "perfeito",
+    "preço",
+    "r$",
+    "desconto",
+    "parcela",
+    "parcelamento",
+    "grátis",
+    "gratuito",
+    "sorteio",
+    "brinde",
+    "promoção",
+    "últimas vagas",
+    "vagas limitadas",
+    "só hoje",
+    "imperdível",
+    "antes e depois"
+  ],
+  "obrigatorios": [
+    "nome do médico, CRM/UF e RQE em todas as telas",
+    "cada caso é avaliado individualmente, quando falar de tratamento"
+  ],
+  "bloqueiaEntrega": [
+    "hífen",
+    "travessão",
+    "CONFIRMAR",
+    "RASCUNHO",
+    "placeholder"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "medico": "exemplo_marca_a",
+  "modelo": 9,
+  "variacao": "A",
+  "tema": "Teste de instalação",
+  "objetivo": "conferir a instalação",
+  "observacoes": "Marca fictícia de teste e sem foto: o resultado esperado é status rascunho com 6 telas.",
+  "roteiro": {
+    "capa": { "palavra": "Sinais", "titulo": "5 sinais de que a sua queda de cabelo *merece avaliação*" },
+    "itens": [
+      { "titulo": "Mais de 100 fios por dia", "texto": "Perder até cerca de 100 fios por dia faz parte do ciclo. Quando a queda passa disso por semanas, vale *investigar a causa*." },
+      { "titulo": "Entradas e topo mais visíveis", "texto": "O recuo na linha da testa ou o couro cabeludo aparecendo no topo podem indicar *alopecia androgenética*." },
+      { "titulo": "Fios mais finos e sem volume", "texto": "Antes da falha aparecer, o fio nasce mais fino e curto a cada ciclo. Perceber cedo *amplia as opções* de cuidado." }
+    ],
+    "conclusao": "Cada caso é avaliado individualmente: o *diagnóstico* vem antes de qualquer tratamento.",
+    "legenda": {
+      "gancho": "Teste de instalação do DESIGN PRO.",
+      "corpo": "Arte de teste com marca fictícia. Não publicar.",
+      "cta": "Não publicar.",
+      "hashtags": ["#teste", "#designpro", "#instalacao", "#rascunho"]
+    }
+  }
+}

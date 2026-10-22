@@ -1,0 +1,132 @@
+{
+  "_sobre": "Ficha montada a partir de entrada/identidade (7 mockups) e entrada/fotos (21 fotos). Nome e especialidade lidos da identidade visual; CRM, UF, RQE, Instagram e cidade não aparecem no material e ficam como CONFIRMAR. Cores medidas nos PNGs da identidade (8.png: verde oliva e monograma dourado; 4.png e 5.png: mármore claro). Fontes da identidade não foram enviadas: Cormorant Garamond e Montserrat são equivalentes licenciados (OFL) da biblioteca, não as fontes originais.",
+  "ficticia": false,
+  "aprovada": true,
+  "medico": {
+    "tratamento": "Dra",
+    "nome": "Laila Segreti",
+    "crm": "CONFIRMAR",
+    "uf": "CONFIRMAR",
+    "rqe": "CONFIRMAR",
+    "especialidade": "Transplante e Medicina Capilar",
+    "instagram": "@CONFIRMAR",
+    "cidade": "CONFIRMAR"
+  },
+  "cores": {
+    "principal": "#C1924C",
+    "apoio": "#59664A",
+    "fundoClaro": "#F3EFE7",
+    "fundoEscuro": "#363F2C",
+    "textoSobreClaro": "#262C1D",
+    "textoSobreEscuro": "#F3EFE7",
+    "acento": "#D9B475"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Cormorant Garamond",
+      "arquivos": [
+        "assets/fontes/cormorant_garamond"
+      ],
+      "pesoForte": 500,
+      "pesoLeve": 300,
+      "temItalico": true,
+      "caixaAlta": false,
+      "tracking": 0
+    },
+    "texto": {
+      "familia": "Montserrat",
+      "arquivos": [
+        "assets/fontes/montserrat"
+      ],
+      "pesoNormal": 400,
+      "pesoForte": 600
+    }
+  },
+  "estilo": {
+    "clima": "elegante, sereno, feminino, natural premium (verde oliva, dourado e mármore)",
+    "luz": "suave",
+    "temperatura": "quente",
+    "raio": 28,
+    "textura": "grao",
+    "elementos": [
+      "monograma LS como marca d'água",
+      "linhas finas douradas",
+      "arcos",
+      "fio de cabelo em curva (do monograma)"
+    ],
+    "preferenciaFundo": "alternado",
+    "evitar": [
+      "neon",
+      "azul clínico",
+      "imagens de couro cabeludo com sangue",
+      "antes e depois"
+    ]
+  },
+  "logo": {
+    "paraFundoClaro": "assets/monograma_ls_escuro.png",
+    "paraFundoEscuro": "assets/monograma_ls_dourado.png",
+    "monograma": "LS"
+  },
+  "fotos": {
+    "retratos": [
+      {
+        "arquivo": "fotos/retrato_blazer_queixo.jpg",
+        "enquadramento": "cintura",
+        "olhar": "camera",
+        "luz": "frontal",
+        "fundoOriginal": "estúdio claro",
+        "aprovada": true
+      },
+      {
+        "arquivo": "fotos/retrato_blazer_queixo2.jpg",
+        "enquadramento": "cintura",
+        "olhar": "lado",
+        "luz": "frontal",
+        "fundoOriginal": "estúdio claro",
+        "aprovada": false
+      },
+      {
+        "arquivo": "fotos/retrato_blazer_maos.jpg",
+        "enquadramento": "cintura",
+        "olhar": "camera",
+        "luz": "frontal",
+        "fundoOriginal": "estúdio claro",
+        "aprovada": false
+      },
+      {
+        "arquivo": "fotos/retrato_blazer_sentada.jpg",
+        "enquadramento": "cintura",
+        "olhar": "lado",
+        "luz": "frontal",
+        "fundoOriginal": "estúdio claro",
+        "aprovada": false
+      },
+      {
+        "arquivo": "fotos/retrato_terracota.jpg",
+        "enquadramento": "cintura",
+        "olhar": "camera",
+        "luz": "frontal",
+        "fundoOriginal": "estúdio claro",
+        "aprovada": true
+      },
+      {
+        "arquivo": "fotos/retrato_terno_cinza.jpg",
+        "enquadramento": "cintura",
+        "olhar": "lado",
+        "luz": "esquerda",
+        "fundoOriginal": "estúdio cinza quente",
+        "aprovada": true
+      }
+    ],
+    "atendimento": [],
+    "detalhe": [],
+    "equipe": [],
+    "clinica": []
+  },
+  "referenciasVisuais": [
+    "entrada/identidade/8.png",
+    "entrada/identidade/7 (1).png",
+    "entrada/identidade/2.png"
+  ],
+  "_aprovacao": "Ficha e fotos retrato_blazer_queixo, retrato_terno_cinza e retrato_terracota aprovadas pelo usuário no chat em 2026-10-20 (\"faça o final\"). CRM, UF e RQE seguem CONFIRMAR: a versão final usa assinatura sem registro por decisão do cliente."
+}

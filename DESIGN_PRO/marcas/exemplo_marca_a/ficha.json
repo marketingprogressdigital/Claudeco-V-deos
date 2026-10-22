@@ -1,0 +1,68 @@
+{
+  "_sobre": "Marca fictícia de teste: Premium escura. Não é um médico real.",
+  "ficticia": true,
+  "aprovada": true,
+  "medico": {
+    "tratamento": "Dr",
+    "nome": "Nome Exemplo",
+    "crm": "00000",
+    "uf": "CE",
+    "rqe": "00000",
+    "especialidade": "Transplante Capilar",
+    "instagram": "@perfil.exemplo",
+    "cidade": "Cidade Exemplo"
+  },
+  "cores": {
+    "principal": "#C9A46B",
+    "apoio": "#2F5D57",
+    "fundoClaro": "#F3EEE5",
+    "fundoEscuro": "#12201E",
+    "textoSobreClaro": "#17211F",
+    "textoSobreEscuro": "#F3EEE5"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Playfair Display",
+      "arquivos": [
+        "assets/fontes/playfair_display"
+      ],
+      "pesoForte": 700,
+      "pesoLeve": 400,
+      "temItalico": true,
+      "caixaAlta": false,
+      "tracking": 0
+    },
+    "texto": {
+      "familia": "Inter",
+      "arquivos": [
+        "assets/fontes/inter"
+      ],
+      "pesoNormal": 400,
+      "pesoForte": 600
+    }
+  },
+  "estilo": {
+    "clima": "premium sóbrio masculino",
+    "luz": "dramatica",
+    "temperatura": "quente",
+    "raio": 22,
+    "textura": "grao",
+    "elementos": [
+      "linhas finas",
+      "arcos",
+      "fios de luz"
+    ],
+    "preferenciaFundo": "escuro",
+    "evitar": []
+  },
+  "logo": {},
+  "fotos": {
+    "retratos": [],
+    "atendimento": [],
+    "detalhe": [],
+    "equipe": [],
+    "clinica": []
+  },
+  "observacao_fotos": "Sem fotos reais. Para testes, gere um retrato de pessoa fictícia anônima de jaleco, marcado como fictício, conforme a referência G4.",
+  "referenciasVisuais": []
+}

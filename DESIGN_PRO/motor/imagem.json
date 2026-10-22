@@ -1,0 +1,25 @@
+{
+  "habilitado": false,
+  "provedor": "gemini",
+  "modelos": {
+    "gemini": "gemini-nano-banana-2.1",
+    "openai": "gpt-image-2"
+  },
+  "conferidoEm": {
+    "gemini": {
+      "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "data": "2026-10-20",
+      "observacao": "Interactions API (POST /v1beta/interactions, cabeçalho x-goog-api-key); Nano Banana 2.1 recomendado para projetos novos; toda imagem leva marca d'água SynthID"
+    },
+    "openai": {
+      "url": "https://developers.openai.com/api/reference/cli/resources/images/methods/generate",
+      "data": "2026-10-20",
+      "observacao": "gpt-image-2 não aceita fundo transparente (usar gpt-image-1 para elementos isolados); resposta sempre em base64"
+    }
+  },
+  "imageSize": "2K",
+  "custoPorImagemUSD": {
+    "gemini": null,
+    "openai": null
+  }
+}

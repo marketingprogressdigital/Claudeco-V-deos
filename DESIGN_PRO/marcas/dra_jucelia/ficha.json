@@ -1,0 +1,106 @@
+{
+  "_sobre": "Ficha montada a partir de Claudeco/medicos/Jucelia Paixão (ficha.md, cores.md, manual_identidade_visual.pdf e logos PNG) e de 3 fotos enviadas no chat em 2026-10-21. Cores do manual: azul marinho #1B2A4A (cor da marca), bege #C9B79C (destaque) e branco. No motor, 'principal' é a cor de destaque (bege) e o azul é fundo escuro e texto. Fonte do manual: Montserrat (licenciada OFL na biblioteca). Red Hat Display e 29LT Bukra aparecem no manual, mas os arquivos não vieram; os títulos usam Montserrat. CRM, UF, RQE, Instagram e cidade: CONFIRMAR (ficha.md).",
+  "ficticia": false,
+  "aprovada": true,
+  "medico": {
+    "tratamento": "Dra",
+    "nome": "Jucelia Paixão",
+    "crm": "CONFIRMAR",
+    "uf": "CONFIRMAR",
+    "rqe": "CONFIRMAR",
+    "especialidade": "Transplante Capilar",
+    "instagram": "@CONFIRMAR",
+    "cidade": "CONFIRMAR"
+  },
+  "cores": {
+    "principal": "#C9B79C",
+    "apoio": "#1B2A4A",
+    "fundoClaro": "#F5F2EC",
+    "fundoEscuro": "#1B2A4A",
+    "textoSobreClaro": "#1B2A4A",
+    "textoSobreEscuro": "#FFFFFF",
+    "acento": "#C9B79C"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Montserrat",
+      "arquivos": [
+        "assets/fontes/montserrat"
+      ],
+      "pesoForte": 700,
+      "pesoLeve": 300,
+      "temItalico": false,
+      "caixaAlta": false,
+      "tracking": 0
+    },
+    "texto": {
+      "familia": "Montserrat",
+      "arquivos": [
+        "assets/fontes/montserrat"
+      ],
+      "pesoNormal": 400,
+      "pesoForte": 600
+    }
+  },
+  "estilo": {
+    "clima": "confiante, acolhedor, transparente; elegância, naturalidade, segurança e planejamento",
+    "luz": "suave",
+    "temperatura": "neutra",
+    "raio": 18,
+    "textura": "grao",
+    "elementos": [
+      "linhas finas",
+      "molduras retas",
+      "monograma JP",
+      "arcos"
+    ],
+    "preferenciaFundo": "alternado",
+    "evitar": [
+      "antes e depois",
+      "promessa de resultado",
+      "neon"
+    ],
+    "destaqueFraco": "marcaTexto"
+  },
+  "logo": {
+    "paraFundoClaro": "assets/jp_monograma_azul.png",
+    "paraFundoEscuro": "assets/jp_monograma_bege.png",
+    "paraFundoPrincipal": "assets/jp_monograma_azul.png",
+    "monograma": "JP"
+  },
+  "fotos": {
+    "retratos": [
+      {
+        "arquivo": "fotos/retrato_vestido_branco.jpg",
+        "enquadramento": "corpo",
+        "olhar": "camera",
+        "luz": "esquerda",
+        "fundoOriginal": "parede clara com arandelas",
+        "aprovada": true
+      },
+      {
+        "arquivo": "fotos/retrato_terno_marrom.jpg",
+        "enquadramento": "corpo",
+        "olhar": "camera",
+        "luz": "frontal",
+        "fundoOriginal": "estúdio cinza com círculo de luz",
+        "aprovada": true
+      },
+      {
+        "arquivo": "fotos/retrato_sentada_perfil.jpg",
+        "enquadramento": "cintura",
+        "olhar": "lado",
+        "luz": "esquerda",
+        "fundoOriginal": "estúdio marrom com luz de persiana",
+        "aprovada": true
+      }
+    ],
+    "atendimento": [],
+    "detalhe": [],
+    "equipe": [],
+    "clinica": []
+  },
+  "referenciasVisuais": [
+    "entrada/identidade/manual_identidade_visual.pdf"
+  ]
+}

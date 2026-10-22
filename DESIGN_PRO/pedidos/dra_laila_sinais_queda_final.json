@@ -1,0 +1,56 @@
+{
+  "medico": "dra_laila",
+  "modelo": 9,
+  "variacao": "A",
+  "tema": "Sinais de que a queda de cabelo merece avaliação",
+  "objetivo": "educar",
+  "roteiro": {
+    "capa": {
+      "palavra": "Sinais",
+      "titulo": "5 sinais de que a sua queda de cabelo *merece avaliação*"
+    },
+    "itens": [
+      {
+        "titulo": "Mais de 100 fios por dia",
+        "texto": "Perder até cerca de 100 fios por dia faz parte do ciclo. Quando a queda passa disso por semanas, vale *investigar a causa*."
+      },
+      {
+        "titulo": "Entradas e topo mais visíveis",
+        "texto": "O recuo na linha da testa ou o couro cabeludo aparecendo no topo podem indicar *alopecia androgenética*, que costuma progredir."
+      },
+      {
+        "titulo": "Fios mais finos e sem volume",
+        "texto": "Antes da falha aparecer, o fio nasce mais fino e curto a cada ciclo. Perceber cedo *amplia as opções* de cuidado."
+      },
+      {
+        "titulo": "Falhas, coceira ou descamação",
+        "texto": "Falhas arredondadas, ardência ou descamação persistente pedem exame do couro cabeludo. Algumas causas têm *tratamento clínico*."
+      },
+      {
+        "titulo": "Calvície na família",
+        "texto": "Pais ou avós com calvície aumentam a predisposição. Acompanhar desde cedo ajuda a planejar o *cuidado certo* para você."
+      }
+    ],
+    "conclusao": "Cada caso é avaliado individualmente: o *diagnóstico* vem antes de qualquer tratamento.",
+    "legenda": {
+      "gancho": "Seu cabelo está dando sinais. Você está prestando atenção?",
+      "corpo": "Queda de cabelo nem sempre é só uma fase. Quantidade de fios, entradas, fios mais finos, falhas e histórico familiar são pistas importantes que merecem um olhar especializado.\n\nQuanto antes a causa é identificada, mais opções de cuidado existem: tratamento clínico, acompanhamento e, quando indicado, transplante capilar.\n\nCada caso é avaliado individualmente, com consulta e exame do couro cabeludo.",
+      "cta": "Salve este post para consultar depois e envie para quem precisa ver.",
+      "hashtags": [
+        "#quedadecabelo",
+        "#transplantecapilar",
+        "#medicinacapilar",
+        "#tricologia",
+        "#saudecapilar",
+        "#alopecia"
+      ]
+    },
+    "aprovacaoMedica": [
+      "Valor de referência de até cerca de 100 fios por dia",
+      "Descrição de miniaturização e alopecia androgenética"
+    ],
+    "confirmar": []
+  },
+  "assinatura": "semRegistro",
+  "versao": "final"
+}

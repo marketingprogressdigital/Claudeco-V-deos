@@ -1,0 +1,369 @@
+{
+  "versao": "1.0",
+  "formatos": {
+    "4x5": [
+      1080,
+      1350
+    ],
+    "9x16": [
+      1080,
+      1920
+    ]
+  },
+  "escolha_por_objetivo": {
+    "parar a rolagem": [
+      1,
+      2,
+      6
+    ],
+    "posicionar opinião": [
+      3,
+      11
+    ],
+    "ensinar e gerar salvamento": [
+      7,
+      9,
+      10,
+      12
+    ],
+    "quebrar objeção": [
+      8,
+      2
+    ],
+    "campanha de saúde": [
+      4
+    ],
+    "gerar agendamento": [
+      5,
+      11
+    ]
+  },
+  "semana_padrao": {
+    "carrosseis": 2,
+    "estaticos": 2,
+    "capas_reels": "uma por Reels"
+  },
+  "modelos": [
+    {
+      "id": 1,
+      "nome": "Autoridade com Título Gigante",
+      "tipo": "estatico",
+      "formato": "4x5",
+      "telas": 1,
+      "receita": "receitas_ia/m01_autoridade_com_titulo_gigante.md",
+      "variacoes": {
+        "A": "noturna com palavra em degradê e eco",
+        "B": "cena de consultório com palavra vazada",
+        "C": "clara editorial com arco"
+      },
+      "campos": {
+        "fraseApoio": 45,
+        "palavra": 10,
+        "etiqueta": 30
+      },
+      "precisa_foto_medico": true,
+      "cenas": [
+        "ELEMENTO_ESFERA",
+        "CENA_CONSULTORIO"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Pergunta Provocativa",
+      "tipo": "estatico",
+      "formato": "4x5",
+      "telas": 1,
+      "receita": "receitas_ia/m02_pergunta_provocativa.md",
+      "variacoes": {
+        "A": "médico saindo do arco",
+        "B": "objeto herói do tema",
+        "C": "foto sangrada do tema"
+      },
+      "campos": {
+        "selo": 28,
+        "pergunta": 50,
+        "chamada": 24
+      },
+      "precisa_foto_medico": "variação A",
+      "cenas": [
+        "CENA_TEMA",
+        "ELEMENTO_FOLICULO"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Frase Manifesto Editorial",
+      "tipo": "estatico",
+      "formato": "4x5",
+      "telas": 1,
+      "receita": "receitas_ia/m03_frase_manifesto_editorial.md",
+      "variacoes": {
+        "A": "papel com moldura e aspas",
+        "B": "textura de fios em duotom",
+        "C": "retrato editorial em preto e branco"
+      },
+      "campos": {
+        "linha1": 22,
+        "linha2": 22,
+        "linha3": 18
+      },
+      "precisa_foto_medico": "variação C",
+      "cenas": [
+        "TEXTURA_FIOS"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Data de Conscientização",
+      "tipo": "estatico",
+      "formato": "4x5",
+      "telas": 1,
+      "receita": "receitas_ia/m04_data_de_conscientizacao.md",
+      "variacoes": {
+        "A": "laço herói",
+        "B": "médico com laço",
+        "C": "tipográfica com textura no texto"
+      },
+      "campos": {
+        "mes": 12,
+        "nomeCor": 9,
+        "temaCampanha": 48,
+        "fraseCuidado": 70
+      },
+      "precisa_foto_medico": "variação B",
+      "cenas": [
+        "CENA_LACO"
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Convite para Avaliação",
+      "tipo": "estatico",
+      "formato": "4x5",
+      "telas": 1,
+      "receita": "receitas_ia/m05_convite_para_avaliacao.md",
+      "variacoes": {
+        "A": "arco e cartão de vidro",
+        "B": "consultório com faixa de vidro",
+        "C": "calendário 3D"
+      },
+      "campos": {
+        "selo": 24,
+        "titulo": 40,
+        "subtitulo": 90,
+        "informacoes": "até 3 itens",
+        "botao": 26
+      },
+      "precisa_foto_medico": true,
+      "cenas": [
+        "CENA_CONSULTORIO",
+        "ELEMENTO_CALENDARIO"
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "Capa de Reels",
+      "tipo": "capa",
+      "formato": "9x16",
+      "telas": 1,
+      "receita": "receitas_ia/m06_capa_de_reels.md",
+      "variacoes": {
+        "A": "frame do vídeo",
+        "B": "retrato com fios de luz",
+        "C": "objeto do tema"
+      },
+      "campos": {
+        "palavra": 12,
+        "complemento": 50
+      },
+      "area_segura_y": [
+        285,
+        1635
+      ],
+      "precisa_foto_medico": "variação B",
+      "cenas": [
+        "TEXTURA_FIOS"
+      ]
+    },
+    {
+      "id": 7,
+      "nome": "Carrossel Educativo",
+      "tipo": "carrossel",
+      "formato": "4x5",
+      "telas": 7,
+      "receita": "receitas_ia/m07_carrossel_educativo.md",
+      "campos": {
+        "capa.titulo": 40,
+        "capa.subtitulo": 60,
+        "oQueE": 230,
+        "porQue": 230,
+        "sinais": "3 a 5 itens de 45",
+        "tratamento": 200,
+        "alerta": 90
+      },
+      "ritmo": [
+        "escuro",
+        "claro",
+        "claro",
+        "claro",
+        "claro",
+        "principal",
+        "escuro"
+      ],
+      "continuidade": [
+        "fios de luz telas 1 a 3",
+        "anel telas 4 e 5",
+        "folículo reaparece na tela 2"
+      ],
+      "precisa_foto_medico": true,
+      "cenas": [
+        "ELEMENTO_FOLICULO",
+        "CENA_MACRO_TEMA",
+        "ELEMENTO_MECANISMO",
+        "ELEMENTO_ESFERA"
+      ]
+    },
+    {
+      "id": 8,
+      "nome": "Mitos e Verdades",
+      "tipo": "carrossel",
+      "formato": "4x5",
+      "telas": "5 a 7",
+      "receita": "receitas_ia/m08_mitos_e_verdades.md",
+      "campos": {
+        "capaSubtitulo": 40,
+        "itens": "3 a 5: afirmacao 70, explicacao 180"
+      },
+      "ritmo": [
+        "escuro",
+        "claro",
+        "suave",
+        "claro",
+        "suave",
+        "claro",
+        "principal"
+      ],
+      "continuidade": [
+        "anéis atravessando as telas de itens"
+      ],
+      "precisa_foto_medico": true,
+      "cenas": [
+        "CENA_TEMA"
+      ]
+    },
+    {
+      "id": 9,
+      "nome": "Lista Numerada",
+      "tipo": "carrossel",
+      "formato": "4x5",
+      "telas": "5 a 8",
+      "receita": "receitas_ia/m09_lista_numerada.md",
+      "campos": {
+        "capa.palavra": 10,
+        "capa.titulo": 80,
+        "itens": "3 a 5: titulo 45, texto 170",
+        "conclusao": 110
+      },
+      "ritmo": [
+        "claro",
+        "alternar escuro e claro",
+        "principal",
+        "escuro"
+      ],
+      "continuidade": [
+        "fios de luz em todas as telas de itens"
+      ],
+      "precisa_foto_medico": true,
+      "cenas": [
+        "TEXTURA_FIOS"
+      ]
+    },
+    {
+      "id": 10,
+      "nome": "Ciência e Estudo",
+      "tipo": "carrossel",
+      "formato": "4x5",
+      "telas": 6,
+      "receita": "receitas_ia/m10_ciencia_e_estudo.md",
+      "campos": {
+        "capa.titulo": 55,
+        "estudo.texto": 230,
+        "mecanismo.passos": "3 de 70",
+        "aplicacao.texto": 230,
+        "ressalva": 110
+      },
+      "exige": "estudo enviado ou aprovado pelo médico",
+      "ritmo": [
+        "escuro",
+        "claro",
+        "claro",
+        "claro",
+        "principal",
+        "escuro"
+      ],
+      "precisa_foto_medico": true,
+      "cenas": [
+        "ELEMENTO_CIENCIA",
+        "ELEMENTO_TABLET"
+      ]
+    },
+    {
+      "id": 11,
+      "nome": "Bastidores e Método",
+      "tipo": "carrossel",
+      "formato": "4x5",
+      "telas": 6,
+      "receita": "receitas_ia/m11_bastidores_e_metodo.md",
+      "campos": {
+        "capa.titulo": 40,
+        "capa.subtitulo": 60,
+        "etapas": "titulo 30, texto 150",
+        "valor": 50
+      },
+      "exige": "fotos reais: retrato em close, atendimento, detalhe e equipe",
+      "ritmo": [
+        "escuro",
+        "claro",
+        "claro",
+        "principal",
+        "claro",
+        "escuro"
+      ],
+      "precisa_foto_medico": true,
+      "cenas": []
+    },
+    {
+      "id": 12,
+      "nome": "Leia Antes de Fazer",
+      "tipo": "carrossel",
+      "formato": "4x5",
+      "telas": 7,
+      "receita": "receitas_ia/m12_leia_antes_de_fazer.md",
+      "campos": {
+        "capa.procedimento": 24,
+        "comoFunciona": 230,
+        "antes": "3 a 4 itens de 60",
+        "noDia": "3 a 4 itens de 60",
+        "depois": "3 a 4 itens de 60",
+        "seguranca": 110
+      },
+      "ritmo": [
+        "claro",
+        "claro",
+        "claro",
+        "suave",
+        "claro",
+        "principal",
+        "escuro"
+      ],
+      "continuidade": [
+        "fios de luz da capa até a tela depois"
+      ],
+      "precisa_foto_medico": true,
+      "cenas": [
+        "ELEMENTO_GOTA",
+        "ELEMENTO_ESFERA"
+      ]
+    }
+  ]
+}

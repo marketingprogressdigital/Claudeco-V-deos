@@ -1,0 +1,75 @@
+{
+  "versao": "1.0",
+  "regras": [
+    "prompts em inglês",
+    "nunca pedir texto, letras, números ou logos",
+    "nunca gerar ou editar o rosto do médico",
+    "gerar de 3 a 4 variações e escolher a melhor",
+    "substituir {PALETA}, {CLIMA}, {LUZ} e {COMPOSICAO} a partir da ficha"
+  ],
+  "variaveis": {
+    "PALETA": "color palette strictly limited to {fundoEscuro}, {principal}, {apoio} and {temperatura} neutrals",
+    "LUZ": {
+      "dramatica": "dramatic chiaroscuro lighting, strong rim light",
+      "suave": "soft diffused window light",
+      "natural": "natural daylight",
+      "clinica": "bright clean clinical lighting"
+    },
+    "COMPOSICAO_exemplo": "subject on the right third, large clean negative space on the left half and top third for typography"
+  },
+  "cenas": {
+    "CENA_CONSULTORIO": {
+      "descricao": "",
+      "prompt": "Ultra realistic editorial photograph of an empty modern premium medical consultation room, minimalist furniture, a desk with a small plant and a closed notebook, large window, {LUZ}, {PALETA}, strongly blurred background bokeh, {COMPOSICAO}, {CLIMA}, 50mm lens f/1.8, fine film grain, no text, no letters, no logos, no people."
+    },
+    "ELEMENTO_FOLICULO": {
+      "descricao": "",
+      "prompt": "Photorealistic 3D render of a single human hair follicle with its root bulb and translucent glass like skin layers, isolated, floating, {LUZ}, {PALETA}, subtle subsurface scattering, scientific yet luxurious, clean background, centered, no text, no labels, no letters."
+    },
+    "TEXTURA_FIOS": {
+      "descricao": "",
+      "prompt": "Macro photograph of healthy dark hair strands flowing in soft waves, extreme detail of individual strands, shallow depth of field, {LUZ}, {PALETA}, abstract and elegant, no faces, no text."
+    },
+    "CENA_MACRO_TEMA": {
+      "descricao": "couro cabeludo",
+      "prompt": "Macro dermatology photograph of a healthy scalp with hair emerging from follicles, clinical but beautiful, soft light, {PALETA}, shallow depth of field, no text, no faces."
+    },
+    "ELEMENTO_ESFERA": {
+      "descricao": "",
+      "prompt": "Photorealistic 3D render of a glossy translucent glass sphere with soft internal glow, {PALETA}, studio lighting, isolated on transparent background, no text."
+    },
+    "ELEMENTO_GOTA": {
+      "descricao": "",
+      "prompt": "Photorealistic 3D render of a single elegant serum drop, glossy, refractive, {PALETA}, studio light, isolated on transparent background, no text."
+    },
+    "ELEMENTO_CIENCIA": {
+      "descricao": "",
+      "prompt": "Photorealistic 3D render of a DNA double helix made of glossy glass and light, diagonal composition, {PALETA}, dark background, bokeh particles, no text, no letters."
+    },
+    "ELEMENTO_TABLET": {
+      "descricao": "",
+      "prompt": "Photorealistic 3D render of a modern tablet with a blank white screen, slightly rotated, on a dark surface, {LUZ}, {PALETA}, premium product photography, no text on the screen, no logos."
+    },
+    "CENA_LACO": {
+      "descricao": "",
+      "prompt": "Ultra realistic studio photograph of two hands gently holding an awareness ribbon in {CORCAMPANHA}, soft {LUZ}, background in {PALETA}, shallow depth of field, elegant and hopeful mood, no text, no faces."
+    },
+    "ELEMENTO_CALENDARIO": {
+      "descricao": "",
+      "prompt": "Photorealistic 3D render of an elegant minimal desk calendar with blank pages, {PALETA}, premium product photography, no text, no numbers."
+    },
+    "ELEMENTO_MECANISMO": {
+      "descricao": "",
+      "prompt": "Photorealistic 3D scientific illustration of a cross section of skin showing hair follicles at different growth stages, glass and light materials, {PALETA}, clean, no labels, no text."
+    },
+    "CENA_TEMA": {
+      "descricao": "cena livre montada a partir do tema seguindo a estrutura do prompt mestre",
+      "prompt": "Ultra realistic editorial photograph of {ASSUNTO}, {COMPOSICAO}, {LUZ}, {PALETA}, 85mm lens f/2, shallow depth of field, {CLIMA}, fine film grain, no text, no letters, no logos, no watermark",
+      "exemplos_assunto": [
+        "hands holding fallen hair strands",
+        "a hairbrush with a few hairs on a marble sink",
+        "a man looking at his hairline in a softly lit mirror, face not visible, seen from behind"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "base": [
+    1080,
+    1350
+  ],
+  "margem": 80,
+  "grade": {
+    "colunas": 12,
+    "calha": 24
+  },
+  "escala": {
+    "gigante": [
+      260,
+      420,
+      0.85
+    ],
+    "tituloCapa": [
+      110,
+      150,
+      0.97
+    ],
+    "tituloTela": [
+      80,
+      104,
+      1.0
+    ],
+    "subtitulo": [
+      44,
+      60,
+      1.15
+    ],
+    "corpo": [
+      38,
+      46,
+      1.42
+    ],
+    "rotulo": [
+      18,
+      24,
+      1.2
+    ],
+    "assinatura": [
+      20,
+      24,
+      1.3
+    ]
+  },
+  "regras": [
+    "proporção mínima de 3 para 1 entre maior e menor texto",
+    "quebra balanceada sem palavra sozinha na última linha",
+    "destaque com no máximo 3 palavras",
+    "algarismos alinhados em números de lista",
+    "serifada de alto contraste nunca abaixo de 34 px",
+    "ajuste automático reduz até 70% do tamanho base"
+  ]
+}

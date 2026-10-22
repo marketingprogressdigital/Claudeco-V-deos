@@ -1,0 +1,132 @@
+{
+  "atmosferaNoturna": {
+    "focoLuzOpacidade": [
+      0.25,
+      0.45
+    ],
+    "feixeDiagonal": true,
+    "vinhetaInterna": "forte"
+  },
+  "atmosferaEditorial": {
+    "sombraJanelaOpacidade": [
+      0.08,
+      0.12
+    ],
+    "desfoque": [
+      25,
+      35
+    ]
+  },
+  "atmosferaClinica": {
+    "focos": [
+      "principal",
+      "apoio"
+    ],
+    "malhaPontos": true
+  },
+  "atmosferaCor": {
+    "base": "principal",
+    "vinheta": "tom escuro da principal"
+  },
+  "grao": {
+    "opacidade": [
+      0.03,
+      0.06
+    ],
+    "modo": "sobreposição"
+  },
+  "vinheta": {
+    "opacidade": [
+      0.1,
+      0.25
+    ]
+  },
+  "luzRecorte": {
+    "largura": [
+      20,
+      40
+    ],
+    "opacidade": [
+      0.35,
+      0.6
+    ],
+    "cor": "principal"
+  },
+  "sombraContato": {
+    "opacidade": [
+      0.2,
+      0.35
+    ]
+  },
+  "vidro": {
+    "sobreEscuro": [
+      0.08,
+      0.14
+    ],
+    "sobreClaro": [
+      0.55,
+      0.75
+    ],
+    "desfoque": [
+      20,
+      30
+    ],
+    "borda": 1.5
+  },
+  "textoDegrade": {
+    "de": "principal clara",
+    "para": "principal escura"
+  },
+  "ecoContorno": {
+    "deslocamento": [
+      16,
+      30
+    ],
+    "opacidade": [
+      0.4,
+      0.6
+    ]
+  },
+  "textoVazado": {},
+  "arco": {
+    "contornoDuplo": true
+  },
+  "aneis": {
+    "opacidade": [
+      0.2,
+      0.5
+    ]
+  },
+  "fiosDeLuz": {
+    "assinatura": "nicho capilar"
+  },
+  "particulas": {
+    "tamanho": [
+      2,
+      10
+    ]
+  },
+  "desfoqueProfundidade": {
+    "desfoque": [
+      8,
+      20
+    ]
+  },
+  "molduraEditorial": {
+    "distancia": 40,
+    "opacidade": 0.25
+  },
+  "carimbo": {
+    "rotacao": [
+      8,
+      14
+    ],
+    "anelDuplo": true
+  },
+  "duotom": {
+    "cores": [
+      "fundoEscuro",
+      "principal"
+    ]
+  }
+}

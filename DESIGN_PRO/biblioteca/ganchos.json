@@ -1,0 +1,18 @@
+{
+  "formulas": {
+    "pergunta": "[dúvida real]?",
+    "crenca": "[crença comum] não é verdade.",
+    "numero": "[N] sinais de que [situação] merece avaliação",
+    "bastidor": "Como é [etapa do meu trabalho]",
+    "alerta": "Não faça nenhum [procedimento] antes de ler esse post!",
+    "manifesto": "[ideia] não é [crença]. É [verdade do médico]."
+  },
+  "exemplos_capilar": [
+    "Transplante capilar dói?",
+    "Boné não causa calvície.",
+    "4 sinais de que sua queda merece avaliação.",
+    "Como é a minha consulta.",
+    "Não faça nenhum transplante antes de ler esse post!",
+    "Naturalidade não é sorte. É planejamento."
+  ]
+}

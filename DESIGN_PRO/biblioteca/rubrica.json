@@ -1,0 +1,48 @@
+{
+  "aprovar": 8.5,
+  "rodadasMaximas": 3,
+  "criterios": [
+    [
+      "impacto da capa",
+      0.15
+    ],
+    [
+      "profundidade",
+      0.12
+    ],
+    [
+      "integração do médico",
+      0.12
+    ],
+    [
+      "tipografia",
+      0.15
+    ],
+    [
+      "fidelidade à marca",
+      0.12
+    ],
+    [
+      "composição",
+      0.1
+    ],
+    [
+      "legibilidade no celular",
+      0.1
+    ],
+    [
+      "acabamento",
+      0.07
+    ],
+    [
+      "ritmo do carrossel",
+      0.07
+    ]
+  ],
+  "faixas": {
+    "9 a 10": "portfólio, entregar",
+    "8,5 a 8,9": "entregar e anotar melhorias",
+    "7 a 8,4": "corrigir o plano e renderizar de novo",
+    "abaixo de 7": "trocar variação ou cena"
+  }
+}

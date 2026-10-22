@@ -1,0 +1,68 @@
+{
+  "_sobre": "Marca fictícia de teste: Clínica moderna. Não é um médico real.",
+  "ficticia": true,
+  "aprovada": true,
+  "medico": {
+    "tratamento": "Dr",
+    "nome": "Nome Exemplo",
+    "crm": "00000",
+    "uf": "MG",
+    "rqe": "00000",
+    "especialidade": "Transplante Capilar",
+    "instagram": "@perfil.exemplo",
+    "cidade": "Cidade Exemplo"
+  },
+  "cores": {
+    "principal": "#0F7C83",
+    "apoio": "#F2B34B",
+    "fundoClaro": "#F4F7F7",
+    "fundoEscuro": "#0B2F35",
+    "textoSobreClaro": "#0B2F35",
+    "textoSobreEscuro": "#F4F7F7"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Oswald",
+      "arquivos": [
+        "assets/fontes/oswald"
+      ],
+      "pesoForte": 600,
+      "pesoLeve": 400,
+      "temItalico": false,
+      "caixaAlta": true,
+      "tracking": 0.01
+    },
+    "texto": {
+      "familia": "Poppins",
+      "arquivos": [
+        "assets/fontes/poppins"
+      ],
+      "pesoNormal": 400,
+      "pesoForte": 600
+    }
+  },
+  "estilo": {
+    "clima": "moderno técnico confiável",
+    "luz": "clinica",
+    "temperatura": "fria",
+    "raio": 28,
+    "textura": "nenhuma",
+    "elementos": [
+      "linhas finas",
+      "arcos",
+      "fios de luz"
+    ],
+    "preferenciaFundo": "alternado",
+    "evitar": []
+  },
+  "logo": {},
+  "fotos": {
+    "retratos": [],
+    "atendimento": [],
+    "detalhe": [],
+    "equipe": [],
+    "clinica": []
+  },
+  "observacao_fotos": "Sem fotos reais. Para testes, gere um retrato de pessoa fictícia anônima de jaleco, marcado como fictício, conforme a referência G4.",
+  "referenciasVisuais": []
+}

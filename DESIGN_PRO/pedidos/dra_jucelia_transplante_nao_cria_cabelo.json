@@ -1,0 +1,36 @@
+{
+  "medico": "dra_jucelia",
+  "modelo": 7,
+  "variacao": "A",
+  "tema": "Transplante capilar não cria cabelo novo",
+  "objetivo": "educar",
+  "assinatura": "semRegistro",
+  "versao": "final",
+  "roteiro": {
+    "capa": {
+      "selo": "TRANSPLANTE CAPILAR",
+      "titulo": "Transplante não cria *cabelo novo*",
+      "subtitulo": "Entenda o que ele faz e por que a conta precisa fechar."
+    },
+    "titulos": {
+      "oQueE": "Ele *muda cabelo* de lugar",
+      "porQue": "Fios que *ficam*, mas são *limitados*",
+      "sinais": "A conta *precisa fechar*",
+      "tratamento": "E o cabelo *que já existe?*"
+    },
+    "oQueE": "O transplante retira fios da parte de trás e das laterais da cabeça, a área doadora, e leva para onde falta. Nenhum fio novo é criado: o cabelo que você tem é redistribuído.",
+    "porQue": "Os fios da área doadora tendem a ser permanentes e mantêm essa característica depois de mudar de lugar. Mas a *quantidade disponível é limitada*.",
+    "sinais": ["Quanto cabelo existe na área doadora", "Quanto falta na frente e no topo", "Se a queda ainda está ativa", "O que você espera do resultado"],
+    "tratamento": "O cabelo que você já tinha nas outras áreas pode continuar caindo. O transplante não impede isso sozinho, por isso o acompanhamento clínico faz parte do planejamento.",
+    "alerta": "Cada caso é avaliado individualmente: antes da cirurgia, a conta *precisa fechar*.",
+    "palavraFundo": "PLANEJAMENTO",
+    "legenda": {
+      "gancho": "Transplante capilar não cria cabelo novo. Ele muda cabelo de lugar.",
+      "corpo": "Os fios são retirados da parte de trás e das laterais da cabeça e levados para onde falta. Eles tendem a ser permanentes, mas a quantidade disponível é limitada.\n\nPor isso, antes de falar em cirurgia, a conta precisa fechar: quanto existe na área doadora e quanto falta na frente e no topo.\n\nE tem mais um ponto: o cabelo que você já tinha nas outras áreas pode continuar caindo. O transplante não impede isso sozinho. Cada caso é avaliado individualmente.",
+      "cta": "Quer entender se o seu caso fecha essa conta? Me chama no direct e me conta o que está acontecendo.",
+      "hashtags": ["#transplantecapilar", "#quedadecabelo", "#medicinacapilar", "#calvicie", "#saudecapilar", "#areadoadora"]
+    },
+    "aprovacaoMedica": ["Fios da área doadora tendem a ser permanentes", "Acompanhamento clínico como parte do planejamento"],
+    "confirmar": []
+  }
+}
