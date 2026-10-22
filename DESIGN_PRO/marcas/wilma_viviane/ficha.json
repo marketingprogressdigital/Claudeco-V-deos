@@ -81,19 +81,19 @@
     ],
     "atendimento": [
       {
-        "arquivo": "fotos/comparativo_antes_topo.jpg",
+        "arquivo": "fotos/comparativo_antes_topo_fundo_cinza.jpg",
         "enquadramento": "busto",
         "olhar": "lado",
         "luz": "frontal",
-        "fundoOriginal": "parede clara; paciente visto de cima, antes do procedimento (recorte da foto enviada no chat em 2026-10-22)",
+        "fundoOriginal": "parede clara; paciente visto de cima, antes do procedimento (recorte da foto enviada no chat em 2026-10-22); fundo removido localmente e trocado pelo cinza #A5A4A0",
         "aprovada": false
       },
       {
-        "arquivo": "fotos/comparativo_depois_frente.jpg",
+        "arquivo": "fotos/comparativo_depois_frente_fundo_cinza.jpg",
         "enquadramento": "busto",
         "olhar": "camera",
         "luz": "frontal",
-        "fundoOriginal": "painel Neofolic; paciente de frente, depois do procedimento (recorte da foto enviada no chat em 2026-10-22); ângulo diferente do antes",
+        "fundoOriginal": "painel Neofolic; paciente de frente, depois do procedimento (recorte da foto enviada no chat em 2026-10-22); ângulo diferente do antes; fundo removido localmente e trocado pelo cinza #A5A4A0",
         "aprovada": false
       }
     ],
