@@ -99,7 +99,7 @@ function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<
   if (semConclusao && r.comparativo) throw new UserError('Modelo 9 variação D: "comparativo" precisa de "conclusao"');
   const total = r.itens.length + (semConclusao ? 1 : 2);
   const fotos = f.ficha.fotos.retratos;
-  // Marcas de fundo escuro (ex.: escolas): itens alternam fundo escuro e cor de apoio, detalhes na cor principal.
+  // Marcas de fundo escuro (ex.: escolas): todos os itens no fundo escuro da marca, detalhes na cor principal.
   const marcaEscura = f.ficha.estilo.preferenciaFundo === "escuro";
   const foto = (arquivo: string, foco: [number, number]): Camada => ({ tipo: "foto", foto: arquivo, caixa: cx(0, 0, W, 1350, 1), tratamento: { gradacao: true, tingimento: 0, duotom: false, pb: false, desfoque: 0, opacidade: 1, ajuste: "cobrir", foco } });
   // Fontes de texto com ascendente alto (ex.: Manrope) passam da margem de 80 px no topo: desce 4 px nessas marcas.
@@ -137,8 +137,8 @@ function m09D(r: Roteiro<9>, f: Parameters<Gerador<Roteiro<9>>>[1]): ReturnType<
       ]);
 
   // Com comparativo a conclusão é escura, então o último item não pode ser escuro.
-  const ciclo = marcaEscura
-    ? (["escuro", "apoio"] as const)
+  const ciclo: readonly Tela["fundo"][] = marcaEscura
+    ? (["escuro"] as const)
     : r.comparativo
       ? (["escuro", "claro", "principal", "claro", "escuro"] as const)
       : (["escuro", "claro", "principal", "escuro", "claro"] as const);
