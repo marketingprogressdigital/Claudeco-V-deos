@@ -28,7 +28,7 @@ const rgb = (hex: string) => {
 /** Cor de fundo efetiva de cada tipo de tela. */
 export function corDoFundo(fundo: Tela["fundo"], f: FichaCarregada): string {
   const c = f.derivadas.cores;
-  return fundo === "claro" ? c.fundoClaro : fundo === "suave" ? misturar(c.fundoClaro, c.principal, 0.12) : fundo === "principal" ? c.principal : c.fundoEscuro;
+  return fundo === "claro" ? c.fundoClaro : fundo === "suave" ? misturar(c.fundoClaro, c.principal, 0.12) : fundo === "principal" ? c.principal : fundo === "apoio" ? c.apoio : c.fundoEscuro;
 }
 
 /** Texto e destaque ideais para o fundo da tela (por contraste WCAG). */
@@ -144,7 +144,7 @@ function camadaHtml(cam: Camada, ti: number, ci: number, f: FichaCarregada, ativ
       return `<div class="fx icone" style="position:absolute;${fx.caixaCss(cam.caixa)}${fundo}box-sizing:border-box;">${iconeSvg(cam.nome)}</div>`;
     }
     case "logo": {
-      const escuro = tela.fundo === "escuro" || tela.fundo === "imagem" || tela.fundo === "principal";
+      const escuro = tela.fundo === "escuro" || tela.fundo === "imagem" || tela.fundo === "principal" || tela.fundo === "apoio";
       const propria = tela.fundo === "principal" ? ativos.logo?.principal : undefined;
       const url = propria ?? (escuro ? ativos.logo?.escuro ?? ativos.logo?.claro : ativos.logo?.claro ?? ativos.logo?.escuro);
       if (url) return `<img class="logo${propria ? " propria" : ""}" src="${url}" style="position:absolute;${fx.caixaCss(cam.caixa)}object-fit:contain;object-position:left center;"/>`;

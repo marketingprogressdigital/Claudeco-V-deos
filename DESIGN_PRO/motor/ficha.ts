@@ -30,7 +30,8 @@ export const Ficha = z.object({
   ficticia: z.boolean().default(false),
   aprovada: z.boolean().default(false),
   medico: z.object({
-    tratamento: z.enum(["Dr", "Dra"]),
+    /** "" para instituição (escola, clínica): a assinatura usa só o nome. */
+    tratamento: z.enum(["Dr", "Dra", ""]),
     nome: z.string().trim().min(1),
     crm: z.string().trim().min(1),
     uf: z.string().regex(/^([A-Z]{2}|CONFIRMAR)$/),

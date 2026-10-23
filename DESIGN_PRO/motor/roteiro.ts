@@ -58,9 +58,12 @@ export const ROTEIROS = {
   }),
   9: z.object({
     ...base,
-    capa: z.object({ palavra: t(10), titulo: comDestaque(80) }),
-    itens: z.array(z.object({ titulo: t(45), texto: comDestaque(170) })).min(3).max(5),
-    conclusao: comDestaque(110),
+    capa: z.object({ palavra: t(10), titulo: comDestaque(80), /** variação D */ subtitulo: t(70).optional() }),
+    itens: z.array(z.object({ titulo: t(45), texto: comDestaque(170), /** variação D: rótulo no lugar do número (ex.: "DIA 1 | FUNDAMENTOS") */ rotulo: t(32).optional() })).min(3).max(5),
+    /** Obrigatória nas variações A a C. Na D, sem conclusão o carrossel termina no último item. */
+    conclusao: comDestaque(110).optional(),
+    /** Variação D sem conclusão: fecho e chamada no rodapé do último item. */
+    rodapeFinal: t(140).optional(),
     /** Variação D: duas fotos autorizadas em polaroide na conclusão (caminhos relativos à pasta da marca). */
     comparativo: z.object({ antes: z.string().regex(/^fotos\/[\w.]+$/), depois: z.string().regex(/^fotos\/[\w.]+$/) }).optional(),
   }),

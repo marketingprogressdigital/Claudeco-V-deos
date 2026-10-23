@@ -33,8 +33,9 @@ export const T = {
 /** Nome, CRM/UF e RQE (obrigatórios em toda tela, CFM). */
 export function assinaturaTexto(f: FichaCarregada): string {
   const m = f.ficha.medico;
-  if (f.semRegistro) return `${m.tratamento} ${m.nome} | ${m.especialidade}`;
-  return `${m.tratamento} ${m.nome} | CRM ${m.crm}/${m.uf}${m.rqe ? ` | RQE ${m.rqe}` : ""}`;
+  const nome = [m.tratamento, m.nome].filter(Boolean).join(" ");
+  if (f.semRegistro) return `${nome} | ${m.especialidade}`;
+  return `${nome} | CRM ${m.crm}/${m.uf}${m.rqe ? ` | RQE ${m.rqe}` : ""}`;
 }
 
 /** Linha fina e assinatura na base (y de 1222 a 1270, dentro da área segura). */

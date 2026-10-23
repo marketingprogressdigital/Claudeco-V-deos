@@ -129,7 +129,7 @@ export const Camada = z.discriminatedUnion("tipo", [
 ]);
 export type Camada = z.infer<typeof Camada>;
 
-export const FUNDOS = ["escuro", "claro", "suave", "principal", "imagem"] as const;
+export const FUNDOS = ["escuro", "claro", "suave", "principal", "apoio", "imagem"] as const;
 export const Tela = z.object({ fundo: z.enum(FUNDOS), papel: z.string().default(""), camadas: z.array(Camada) });
 export type Tela = z.infer<typeof Tela>;
 

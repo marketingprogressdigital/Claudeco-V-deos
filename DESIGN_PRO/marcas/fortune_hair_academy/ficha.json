@@ -1,0 +1,48 @@
+{
+  "_sobre": "Ficha montada em 2026-10-23 a partir do Manual da Marca Fortune Hair Academy (v1.0, setembro 2026, enviado no chat). Instituição de ensino, não médico: tratamento vazio e assinatura sem CRM (pedido com assinatura semRegistro). Cores do manual: grafite #262830 (60%), azul acinzentado #5E7485 (25%), branco (10%), dourado #B8964E só em detalhes (5%), cinza claro #F4F6F8. Tipografia do manual: Cormorant Garamond (títulos e logotipo; Medium, Semibold, Bold) e Manrope (textos; Regular, Medium, Bold), ambas OFL. Logo PROVISÓRIO: extraído da imagem da capa do manual (o PDF não traz os arquivos oficiais); trocar pelos arquivos oficiais assim que chegarem. Instagram @fortunehairacademy visto no mockup da página 11 do manual (confirmar).",
+  "ficticia": false,
+  "aprovada": false,
+  "medico": {
+    "tratamento": "",
+    "nome": "Fortune Hair Academy",
+    "crm": "CONFIRMAR",
+    "uf": "CONFIRMAR",
+    "especialidade": "Formação em transplante capilar",
+    "instagram": "@fortunehairacademy",
+    "cidade": "CONFIRMAR"
+  },
+  "cores": {
+    "principal": "#B8964E",
+    "apoio": "#5E7485",
+    "fundoClaro": "#F4F6F8",
+    "fundoEscuro": "#262830",
+    "textoSobreClaro": "#262830",
+    "textoSobreEscuro": "#FFFFFF",
+    "acento": "#B8964E"
+  },
+  "fontes": {
+    "titulo": { "familia": "Cormorant Garamond", "arquivos": ["assets/fontes/cormorant_garamond"], "pesoForte": 600, "pesoLeve": 500, "temItalico": false, "caixaAlta": false, "tracking": 0 },
+    "texto": { "familia": "Manrope", "arquivos": ["assets/fontes/manrope"], "pesoNormal": 400, "pesoForte": 600 }
+  },
+  "estilo": {
+    "clima": "precisa, serena, experiente, exclusiva e sóbria",
+    "luz": "dramatica",
+    "temperatura": "fria",
+    "raio": 6,
+    "textura": "grao",
+    "elementos": ["linhas de eixo", "interseções", "quadrante ampliado", "dourado só em detalhes"],
+    "preferenciaFundo": "escuro",
+    "evitar": ["dourado em grandes áreas", "sombra ou contorno no logo", "fundos de baixo contraste", "cores fora da paleta"]
+  },
+  "logo": {
+    "paraFundoClaro": "assets/simbolo.png",
+    "paraFundoEscuro": "assets/simbolo.png",
+    "paraFundoPrincipal": "assets/simbolo.png",
+    "monograma": "F"
+  },
+  "fotos": {
+    "retratos": [], "atendimento": [], "equipe": [], "clinica": [],
+    "detalhe": [{ "arquivo": "assets/assinatura_vertical.png", "enquadramento": "busto", "olhar": "camera", "luz": "frontal", "fundoOriginal": "assinatura vertical (símbolo + FORTUNE HAIR ACADEMY) extraída da capa do manual; provisória", "aprovada": true }]
+  },
+  "referenciasVisuais": ["Manual da Marca Fortune Hair Academy v1.0 (setembro 2026)"]
+}

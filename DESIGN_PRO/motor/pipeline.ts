@@ -137,12 +137,13 @@ export async function produzir(pedido: Pedido, opts: { navegador?: Browser; said
     const out = await renderizar(navegador, html, doc.largura, doc.altura, plano.telas.length);
     const leg = roteiro.legenda;
     const md = f.ficha.medico;
-    const assinatura = f.semRegistro ? `${md.tratamento} ${md.nome} | ${md.especialidade}` : `${md.tratamento} ${md.nome} | CRM ${md.crm}/${md.uf}${md.rqe ? ` | RQE ${md.rqe}` : ""}`;
+    const nomeAss = [md.tratamento, md.nome].filter(Boolean).join(" ");
+    const assinatura = f.semRegistro ? `${nomeAss} | ${md.especialidade}` : `${nomeAss} | CRM ${md.crm}/${md.uf}${md.rqe ? ` | RQE ${md.rqe}` : ""}`;
     const legenda = `${leg.gancho}\n\n${leg.corpo}\n\n${leg.cta}\n\n${assinatura}\n\n${leg.hashtags.join(" ")}\n`;
     const checagem = await checar({
       telas: out.telas, telasSemTexto: out.telasSemTexto, textos: out.textos, avisosAjuste: out.avisos, fontes: out.fontes,
       familiasDaFicha: [f.ficha.fontes.titulo.familia, f.ficha.fontes.texto.familia, ...(f.ficha.fontes.destaque ? [f.ficha.fontes.destaque.familia] : [])],
-      crm: md.crm, uf: md.uf, exigirRegistro: !f.semRegistro, nome: `${md.tratamento} ${md.nome}`, largura: W, altura: H, formato: plano.formato, legenda, pendencias: unicas,
+      crm: md.crm, uf: md.uf, exigirRegistro: !f.semRegistro, nome: [md.tratamento, md.nome].filter(Boolean).join(" "), largura: W, altura: H, formato: plano.formato, legenda, pendencias: unicas,
     });
 
     const arquivos: string[] = [];
