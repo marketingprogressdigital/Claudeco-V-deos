@@ -73,6 +73,8 @@ export const m01: Gerador<Roteiro<1>> = (r, f, v, luz) => {
 
 /* ---------- MODELO 2 · Pergunta provocativa ---------- */
 export const m02: Gerador<Roteiro<2>> = (r, f, v, luz) => {
+  if (v !== "D" && !r.selo) throw new UserError(`Modelo 2 variação ${v} precisa de "selo" no roteiro`);
+  const selo = r.selo ?? "";
   if (v === "D") {
     // Tipográfica, sem foto nem IA: afirmação (selo) em serifa, pergunta grande, apoio e botão; anéis e eixo como grafismo.
     const escuro = escuroPreferido(f);
@@ -84,10 +86,18 @@ export const m02: Gerador<Roteiro<2>> = (r, f, v, luz) => {
         forma("anel", cx(700, -120, 580, 580, 4), "apoio", 0.22),
         forma("linha", cx(990, 0, 1.5, 620, 5), "principal", 0.35),
         logo(M, M - 10, 86, 76),
-        T.subtitulo(r.selo, cx(M, 300, span(10), 70, 50), { tamanho: 52, italico: false, peso: "normal" }),
-        forma("linha", cx(M, 392, 72, 2, 50), "principal", 0.9),
-        T.titulo(r.pergunta, cx(M, 424, span(11), 460, 50), { tamanho: 94, entrelinha: 1.12 }),
-        ...(r.apoio ? [T.corpo(r.apoio, cx(M, 900, span(10), 110, 50), { tamanho: 30, entrelinha: 1.45 })] : []),
+        // Com selo: selo, filete e pergunta de cima para baixo. Sem selo: pergunta assentada sobre o filete, perto do apoio.
+        ...(r.selo
+          ? [
+              T.subtitulo(r.selo, cx(M, 300, span(10), 70, 50), { tamanho: 52, italico: false, peso: "normal" }),
+              forma("linha", cx(M, 392, 72, 2, 50), "principal", 0.9),
+              T.titulo(r.pergunta, cx(M, 424, span(11), 460, 50), { tamanho: 94, entrelinha: 1.12 }),
+            ]
+          : [
+              T.titulo(r.pergunta, cx(M, 260, span(11), 560, 50), { tamanho: 94, entrelinha: 1.12, vertical: "base" }),
+              forma("linha", cx(M, 852, 72, 2, 50), "principal", 0.9),
+            ]),
+        ...(r.apoio ? [T.corpo(r.apoio, cx(M, r.selo ? 900 : 884, span(10), 110, 50), { tamanho: 30, entrelinha: 1.45 })] : []),
         ...botao(r.chamada, M, 1062, 560),
         ...rodape(f),
       ])],
@@ -104,7 +114,7 @@ export const m02: Gerador<Roteiro<2>> = (r, f, v, luz) => {
         forma("arco", cx(600, 520, 400, 830, 12), "principal", 0.95, true),
         medico(cx(530, 420, 540, 930, 30), luz, "retrato", "frente"),
         logo(),
-        ...pilula(r.selo, M, 250, 400, escuro ? "escuro" : "claro", 55, "esquerda"),
+        ...pilula(selo, M, 250, 400, escuro ? "escuro" : "claro", 55, "esquerda"),
         T.titulo(r.pergunta, cx(M, 340, span(6), 520, 50), { tamanho: 104 }),
         ...pilula(r.chamada, M, 1100, 340, escuro ? "escuro" : "claro"),
         ...rodape(f),
@@ -121,7 +131,7 @@ export const m02: Gerador<Roteiro<2>> = (r, f, v, luz) => {
         imagem("ELEMENTO_FOLICULO", cx(290, 470, 500, 600, 20), { transparente: true, proporcao: "4:5" }),
         efeito("sombraContato", cx(360, 1040, 360, 80, 19), { opacidade: 0.35 }),
         logo(),
-        ...pilula(r.selo, (W - 420) / 2, 190, 420, "escuro"),
+        ...pilula(selo, (W - 420) / 2, 190, 420, "escuro"),
         T.titulo(r.pergunta, cx(M, 270, span(12), 220, 50), { tamanho: 96, alinhar: "centro" }),
         ...pilula(r.chamada, (W - 360) / 2, 1110, 360, "escuro"),
         ...rodape(f),
@@ -134,7 +144,7 @@ export const m02: Gerador<Roteiro<2>> = (r, f, v, luz) => {
       imagem("CENA_TEMA", cx(0, 0, W, 1350, 1), { tingimento: 0.3, assunto: "hands holding fallen hair strands" }),
       veu(520, 830, "fundoEscuro", 0.95, 10),
       logo(),
-      ...pilula(r.selo, M, 640, 400, "escuro", 55, "esquerda"),
+      ...pilula(selo, M, 640, 400, "escuro", 55, "esquerda"),
       T.titulo(r.pergunta, cx(M, 720, span(12), 330, 50), { tamanho: 118, sombra: true }),
       ...pilula(r.chamada, M, 1090, 340, "escuro"),
       ...rodape(f),

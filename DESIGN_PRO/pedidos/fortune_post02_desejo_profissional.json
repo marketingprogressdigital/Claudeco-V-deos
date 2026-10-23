@@ -1,0 +1,19 @@
+{
+  "medico": "fortune_hair_academy",
+  "modelo": 2,
+  "variacao": "D",
+  "tema": "post 02 desejo profissional",
+  "assinatura": "semRegistro",
+  "versao": "final",
+  "roteiro": {
+    "pergunta": "Sua carreira médica pode ir além do consultório *tradicional*.",
+    "apoio": "Descubra novas possibilidades de atuação por meio do transplante capilar.",
+    "chamada": "Conheça nossa formação.",
+    "legenda": {
+      "gancho": "Sua carreira médica pode ir além do consultório tradicional.",
+      "corpo": "Descubra novas possibilidades de atuação por meio do transplante capilar, com uma formação construída sobre método, prática e acompanhamento real.",
+      "cta": "Conheça nossa formação pelo link da bio.",
+      "hashtags": ["#transplantecapilar", "#formacaomedica", "#fortunehairacademy", "#carreiramedica"]
+    }
+  }
+}
