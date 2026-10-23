@@ -5,19 +5,45 @@
   "tema": "imersão de 4 dias",
   "assinatura": "semRegistro",
   "roteiro": {
-    "capa": { "palavra": "4 dias.", "titulo": "Da base à cirurgia *integral*.", "subtitulo": "Veja como funciona a imersão da Fortune Hair Academy." },
+    "capa": {
+      "palavra": "4 dias.",
+      "titulo": "Da base à cirurgia *integral*.",
+      "subtitulo": "Veja como funciona a imersão da Fortune Hair Academy."
+    },
     "itens": [
-      { "rotulo": "DIA 1 | FUNDAMENTOS", "titulo": "Antes de executar, é preciso *entender*.", "texto": "Fundamentos do transplante capilar, planejamento, preparação para a prática e desenvolvimento das habilidades que serão aplicadas nos próximos dias." },
-      { "rotulo": "DIA 2 | EXTRAÇÃO", "titulo": "Hora de desenvolver *precisão*.", "texto": "Prática voltada à extração das unidades foliculares, manejo dos instrumentos e cuidados necessários durante essa etapa do procedimento." },
-      { "rotulo": "DIA 3 | IMPLANTAÇÃO", "titulo": "Cada enxerto exige *estratégia*.", "texto": "Treinamento de implantação, manipulação dos folículos e compreensão dos detalhes técnicos que influenciam a execução do transplante." },
-      { "rotulo": "DIA 4 | CIRURGIA INTEGRAL", "titulo": "Do planejamento à *execução completa*.", "texto": "O aluno acompanha e participa da cirurgia integral, colocando em prática os conhecimentos desenvolvidos durante a imersão." }
+      {
+        "rotulo": "DIA 1 | FUNDAMENTOS",
+        "titulo": "Antes de executar, é preciso *entender*.",
+        "texto": "Fundamentos do transplante capilar, planejamento, preparação para a prática e desenvolvimento das habilidades que serão aplicadas nos próximos dias."
+      },
+      {
+        "rotulo": "DIA 2 | EXTRAÇÃO",
+        "titulo": "Hora de desenvolver *precisão*.",
+        "texto": "Prática voltada à extração das unidades foliculares, manejo dos instrumentos e cuidados necessários durante essa etapa do procedimento."
+      },
+      {
+        "rotulo": "DIA 3 | IMPLANTAÇÃO",
+        "titulo": "Cada enxerto exige *estratégia*.",
+        "texto": "Treinamento de implantação, manipulação dos folículos e compreensão dos detalhes técnicos que influenciam a execução do transplante."
+      },
+      {
+        "rotulo": "DIA 4 | CIRURGIA INTEGRAL",
+        "titulo": "Do planejamento à *execução completa*.",
+        "texto": "O aluno acompanha e participa da cirurgia integral, colocando em prática os conhecimentos desenvolvidos durante a imersão."
+      }
     ],
     "rodapeFinal": "Quatro dias para transformar conhecimento em experiência prática. Conheça a Fortune Hair Academy pelo link da bio.",
     "legenda": {
       "gancho": "4 dias. Da base à cirurgia integral.",
       "corpo": "Dia 1, fundamentos: planejamento e preparação para a prática. Dia 2, extração: precisão, manejo dos instrumentos e cuidados da etapa. Dia 3, implantação: manipulação dos folículos e detalhes técnicos da execução. Dia 4, cirurgia integral: o aluno acompanha e participa do procedimento completo. Quatro dias para transformar conhecimento em experiência prática.",
       "cta": "Conheça a Fortune Hair Academy pelo link da bio.",
-      "hashtags": ["#transplantecapilar", "#formacaomedica", "#fortunehairacademy", "#cirurgiacapilar"]
+      "hashtags": [
+        "#transplantecapilar",
+        "#formacaomedica",
+        "#fortunehairacademy",
+        "#cirurgiacapilar"
+      ]
     }
-  }
+  },
+  "versao": "final"
 }
