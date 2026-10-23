@@ -1,0 +1,25 @@
+{
+  "medico": "fortune_hair_academy",
+  "modelo": 2,
+  "variacao": "D",
+  "tema": "post 01 oportunidade de mercado",
+  "assinatura": "semRegistro",
+  "roteiro": {
+    "selo": "O mercado capilar cresce.",
+    "pergunta": "E você, médico, está preparado para fazer *parte dele*?",
+    "apoio": "Amplie suas possibilidades de atuação com uma formação especializada em transplante capilar.",
+    "chamada": "Conheça a Fortune Hair Academy.",
+    "legenda": {
+      "gancho": "O mercado capilar cresce. E você, médico, está preparado para fazer parte dele?",
+      "corpo": "Amplie suas possibilidades de atuação com uma formação especializada em transplante capilar: método, prática e acompanhamento real.",
+      "cta": "Conheça a Fortune Hair Academy pelo link da bio.",
+      "hashtags": [
+        "#transplantecapilar",
+        "#formacaomedica",
+        "#fortunehairacademy",
+        "#medicina"
+      ]
+    }
+  },
+  "versao": "final"
+}

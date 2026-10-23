@@ -23,7 +23,7 @@ const base = { legenda: Legenda, aprovacaoMedica: z.array(z.string()).default([]
 
 export const ROTEIROS = {
   1: z.object({ ...base, fraseApoio: t(45), palavra: t(10).refine((s) => !/\s/.test(s.trim()), "uma palavra só"), etiqueta: t(30).optional() }),
-  2: z.object({ ...base, selo: t(28), pergunta: comDestaque(50), chamada: t(24) }),
+  2: z.object({ ...base, selo: t(28), pergunta: comDestaque(60), chamada: t(34), /** variação D: frase de apoio sob a pergunta */ apoio: t(110).optional() }),
   3: z.object({ ...base, linha1: t(22), linha2: t(22), linha3: t(18) }),
   4: z.object({ ...base, mes: t(12), nomeCor: t(9), corCampanha: z.string().regex(/^#[0-9a-fA-F]{6}$/), temaCampanha: t(48), fraseCuidado: comDestaque(70) }),
   5: z.object({

@@ -73,6 +73,26 @@ export const m01: Gerador<Roteiro<1>> = (r, f, v, luz) => {
 
 /* ---------- MODELO 2 · Pergunta provocativa ---------- */
 export const m02: Gerador<Roteiro<2>> = (r, f, v, luz) => {
+  if (v === "D") {
+    // Tipográfica, sem foto nem IA: afirmação (selo) em serifa, pergunta grande, apoio e botão; anéis e eixo como grafismo.
+    const escuro = escuroPreferido(f);
+    return {
+      modelo: 2, variacao: "D", formato: "4x5",
+      telas: [tela(escuro ? "escuro" : "claro", "capa", [
+        escuro ? atmosfera("noturno", [0.75, 0.25], 0.1) : atmosfera("editorial", [0.75, 0.25], 0.06),
+        forma("anel", cx(560, -260, 860, 860, 4), "apoio", 0.35),
+        forma("anel", cx(700, -120, 580, 580, 4), "apoio", 0.22),
+        forma("linha", cx(990, 0, 1.5, 620, 5), "principal", 0.35),
+        logo(M, M - 10, 86, 76),
+        T.subtitulo(r.selo, cx(M, 300, span(10), 70, 50), { tamanho: 52, italico: false, peso: "normal" }),
+        forma("linha", cx(M, 392, 72, 2, 50), "principal", 0.9),
+        T.titulo(r.pergunta, cx(M, 424, span(11), 460, 50), { tamanho: 94, entrelinha: 1.12 }),
+        ...(r.apoio ? [T.corpo(r.apoio, cx(M, 900, span(10), 110, 50), { tamanho: 30, entrelinha: 1.45 })] : []),
+        ...botao(r.chamada, M, 1062, 560),
+        ...rodape(f),
+      ])],
+    };
+  }
   if (v === "A") {
     const escuro = escuroPreferido(f);
     return {
