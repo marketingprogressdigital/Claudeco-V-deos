@@ -1,0 +1,63 @@
+{
+  "_sobre": "Roteiro do vídeo institucional Bastidores, Dr. Marcel Giolo. Tempos em compassos da trilha (72 BPM, 1 compasso = 3,333 s), para os cortes caírem no tempo da música. Os trechos dos brutos (inicio/fim, em segundos) são ajustados depois de assistir o material.",
+  "formato": { "largura": 1080, "altura": 1920, "fps": 30 },
+  "bpm": 72,
+  "medico": {
+    "assinatura": "DR. MARCEL GIOLO  |  CRM PR 43.184",
+    "instagram": "@drmarcelgiolo",
+    "aviso": "Cada caso é avaliado individualmente."
+  },
+  "cores": {
+    "fundo": "#1C100E",
+    "creme": "#E3D8C4",
+    "apoio": "#B9A992"
+  },
+  "cenas": [
+    { "id": "abertura", "tipo": "logo", "compassos": 1.5 },
+    {
+      "id": "marcacao",
+      "tipo": "clipe",
+      "bruto": "brutos/marcacao.mov",
+      "inicio": 0,
+      "compassos": 4,
+      "capitulo": ["01", "A MARCAÇÃO"],
+      "titulo": ["OS BASTIDORES", "de uma cirurgia capilar"],
+      "palavras": [
+        { "compasso": 1.75, "texto": "PLANEJAMENTO" },
+        { "compasso": 3.0, "texto": "PRECISÃO" }
+      ]
+    },
+    {
+      "id": "foliculo",
+      "tipo": "motion_foliculo",
+      "compassos": 1,
+      "fundo_bruto": "brutos/cirurgia.mov",
+      "fundo_inicio": 0
+    },
+    {
+      "id": "cirurgia",
+      "tipo": "clipe",
+      "bruto": "brutos/cirurgia.mov",
+      "inicio": 3,
+      "compassos": 4,
+      "capitulo": ["02", "A CIRURGIA"],
+      "palavras": [
+        { "compasso": 1.0, "texto": "TÉCNICA" },
+        { "compasso": 2.5, "texto": "EXPERIÊNCIA" }
+      ]
+    },
+    {
+      "id": "pos",
+      "tipo": "clipe",
+      "bruto": "brutos/pos_imediato.mov",
+      "inicio": 0,
+      "compassos": 3,
+      "capitulo": ["03", "O PRIMEIRO OLHAR"],
+      "palavras": [
+        { "compasso": 0.75, "texto": "CUIDADO" },
+        { "compasso": 2.0, "texto": "CONFIANÇA" }
+      ]
+    },
+    { "id": "encerramento", "tipo": "assinatura", "compassos": 2 }
+  ]
+}
