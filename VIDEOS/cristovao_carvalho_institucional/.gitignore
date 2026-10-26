@@ -1,0 +1,5 @@
+brutos/*
+!brutos/.gitkeep
+saida/*
+!saida/.gitkeep
+__pycache__/

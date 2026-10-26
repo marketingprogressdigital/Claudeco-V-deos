@@ -20,6 +20,8 @@ import numpy as np
 
 import motion as M
 import trilha
+from motion import N
+from nucleo import zoom_lento
 
 AQUI = Path(__file__).parent
 
@@ -38,52 +40,8 @@ GRADE = (
 )
 
 
-class Bruto:
-    """Leitor sequencial de um vídeo bruto, já no 9:16 e com cor tratada."""
-
-    def __init__(self, caminho, inicio, dur, W, H, fps, velocidade=1.0, modo="preencher"):
-        self.W, self.H = W, H
-        self.ultimo = None
-        self.lidos = 0
-        if modo == "preencher":
-            vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
-        else:
-            # vídeo deitado: centraliza sobre o próprio vídeo desfocado
-            vf = (f"split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
-                  f"gblur=sigma=40,eq=brightness=-0.12[f];[b]scale={W}:-2[v];[f][v]overlay=(W-w)/2:(H-h)/2")
-        if velocidade != 1.0:
-            vf = f"setpts=PTS/{velocidade}," + vf
-        vf += f",fps={fps},{GRADE}"
-        dur_fonte = dur * velocidade + 0.5
-        cmd = ["ffmpeg", "-v", "error", "-ss", f"{max(0, inicio):.3f}", "-t", f"{dur_fonte:.3f}",
-               "-i", str(caminho), "-an", "-vf", vf, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
-        self.proc = subprocess.Popen(cmd, stdout=subprocess.PIPE)
-        self.tam = W * H * 3
-
-    def quadro(self, idx):
-        while self.lidos <= idx:
-            buf = self.proc.stdout.read(self.tam)
-            if len(buf) < self.tam:
-                break
-            self.ultimo = np.frombuffer(buf, np.uint8).reshape(self.H, self.W, 3)
-            self.lidos += 1
-        if self.ultimo is None:
-            return np.zeros((self.H, self.W, 3), np.float32) + M.FUNDO
-        return self.ultimo.astype(np.float32)
-
-    def fechar(self):
-        self.proc.stdout.close()
-        self.proc.kill()
-
-
-def zoom_lento(frame, s, foco=(0.5, 0.5)):
-    """Aproximação suave (Ken Burns) com precisão de subpixel."""
-    if abs(s - 1) < 1e-4:
-        return frame
-    H, W = frame.shape[:2]
-    fx, fy = foco[0] * W, foco[1] * H
-    m = np.array([[s, 0, fx * (1 - s)], [0, s, fy * (1 - s)]], np.float32)
-    return cv2.warpAffine(frame, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+def Bruto(caminho, inicio, dur, W, H, fps, velocidade=1.0, modo="preencher"):
+    return N.Bruto(caminho, inicio, dur, W, H, fps, GRADE, M.FUNDO, velocidade, modo)
 
 
 class Cena:

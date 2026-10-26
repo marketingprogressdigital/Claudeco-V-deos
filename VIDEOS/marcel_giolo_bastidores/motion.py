@@ -4,14 +4,18 @@ Tudo é desenhado quadro a quadro em numpy/PIL/OpenCV, a partir do logo
 oficial (extraído do voucher da marca) e das fontes oficiais (Italiana para
 títulos, Questrial para textos).
 """
+import sys
 from functools import lru_cache
 from pathlib import Path
 
 import cv2
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 AQUI = Path(__file__).parent
+sys.path.insert(0, str(AQUI.parent))
+import nucleo as N  # noqa: E402
+from nucleo import cabe, clamp01, compor, ease_in_out, ease_out, prog  # noqa: E402
 MARCA = AQUI / "marca"
 
 CREME = np.array([227, 216, 196], np.float32)
@@ -19,62 +23,12 @@ FUNDO = np.array([28, 16, 14], np.float32)
 APOIO = np.array([185, 169, 146], np.float32)
 
 
-# ---------------------------------------------------------------- curvas
-def clamp01(x):
-    return float(min(1.0, max(0.0, x)))
-
-
-def prog(t, ini, dur):
-    return clamp01((t - ini) / dur) if dur > 0 else float(t >= ini)
-
-
-def ease_out(x):
-    return 1 - (1 - x) ** 3
-
-
-def ease_in_out(x):
-    return 0.5 - 0.5 * np.cos(np.pi * x)
-
-
-def entra_sai(t, ini, fim, e=0.5, s=0.5):
-    """Opacidade que entra em `e` segundos e sai em `s` segundos."""
-    return ease_in_out(prog(t, ini, e)) * (1 - ease_in_out(prog(t, fim - s, s)))
-
-
 # ---------------------------------------------------------------- texto
-@lru_cache(maxsize=None)
-def fonte(nome, tam):
-    arq = {"titulo": "Italiana-Regular.ttf", "texto": "Questrial-Regular.ttf"}[nome]
-    return ImageFont.truetype(str(MARCA / "fontes" / arq), int(tam))
+FONTES = {"titulo": MARCA / "fontes" / "Italiana-Regular.ttf", "texto": MARCA / "fontes" / "Questrial-Regular.ttf"}
 
 
 def texto_rgba(txt, familia, tam, tracking=0.0, cor=CREME):
-    """Renderiza texto com espaçamento entre letras (em fração do corpo)."""
-    f = fonte(familia, tam)
-    esp = tracking * tam
-    larguras = [f.getlength(c) for c in txt]
-    w = int(sum(larguras) + esp * max(0, len(txt) - 1)) + 8
-    asc, desc = f.getmetrics()
-    h = asc + desc + 8
-    img = Image.new("L", (max(w, 1), h), 0)
-    d = ImageDraw.Draw(img)
-    x = 4.0
-    for c, lw in zip(txt, larguras):
-        d.text((x, 4), c, font=f, fill=255)
-        x += lw + esp
-    a = np.asarray(img, np.float32) / 255.0
-    rgba = np.zeros((h, w, 4), np.float32)
-    rgba[..., :3] = cor
-    rgba[..., 3] = a
-    return rgba
-
-
-def cabe(img, largura_max):
-    """Reduz a camada se ela passar da largura útil da tela."""
-    if img.shape[1] <= largura_max:
-        return img
-    h = int(img.shape[0] * largura_max / img.shape[1])
-    return cv2.resize(img, (int(largura_max), h), interpolation=cv2.INTER_AREA)
+    return N.texto_rgba(txt, FONTES[familia], tam, tracking, cor)
 
 
 def logo_parte(nome):
@@ -110,74 +64,21 @@ def letras_do_nome(largura):
 
 
 # ---------------------------------------------------------------- composição
-def compor(frame, rgba, cx, cy, opac=1.0, ancora="centro", blur=0.0, escala=1.0):
-    """Cola uma camada RGBA (float, alfa 0..1) sobre o quadro RGB float."""
-    if opac <= 0.002 or rgba is None:
-        return
-    if escala != 1.0:
-        rgba = cv2.resize(rgba, None, fx=escala, fy=escala, interpolation=cv2.INTER_LINEAR)
-    if blur > 0.3:
-        pad = int(blur * 3) + 2
-        rgba = cv2.copyMakeBorder(rgba, pad, pad, pad, pad, cv2.BORDER_CONSTANT, value=0)
-        rgba = cv2.GaussianBlur(rgba, (0, 0), blur)
-    h, w = rgba.shape[:2]
-    if ancora == "centro":
-        x0, y0 = int(round(cx - w / 2)), int(round(cy - h / 2))
-    elif ancora == "esquerda":
-        x0, y0 = int(round(cx)), int(round(cy - h / 2))
-    else:
-        x0, y0 = int(round(cx - w)), int(round(cy - h / 2))
-    H, W = frame.shape[:2]
-    xa, ya, xb, yb = max(0, x0), max(0, y0), min(W, x0 + w), min(H, y0 + h)
-    if xa >= xb or ya >= yb:
-        return
-    sub = rgba[ya - y0:yb - y0, xa - x0:xb - x0]
-    a = sub[..., 3:4] * opac
-    reg = frame[ya:yb, xa:xb]
-    reg *= 1 - a
-    reg += sub[..., :3] * a
-
-
 def linha(frame, x0, y0, x1, y1, opac=1.0, esp=2, cor=CREME):
-    H, W = frame.shape[:2]
-    m = np.zeros((H, W), np.uint8)
-    cv2.line(m, (int(x0 * 4), int(y0 * 4)), (int(x1 * 4), int(y1 * 4)), 255, esp, cv2.LINE_AA, shift=2)
-    a = (m.astype(np.float32) / 255 * opac)[..., None]
-    frame *= 1 - a
-    frame += cor * a
+    N.linha(frame, x0, y0, x1, y1, cor, opac, esp)
 
 
 def gradiente_escuro(frame, y_centro, altura, forca=0.55):
     """Faixa escura suave atrás dos textos, na cor de fundo da marca."""
-    H = frame.shape[0]
-    y = np.arange(H, dtype=np.float32)
-    a = np.exp(-((y - y_centro) / (altura / 2)) ** 2) * forca
-    a = a[:, None, None]
-    frame *= 1 - a
-    frame += FUNDO * a
+    N.faixa_escura(frame, y_centro, altura, FUNDO, forca)
 
 
 # ---------------------------------------------------------------- acabamento
-class Acabamento:
+class Acabamento(N.Acabamento):
     """Vinheta, grão de filme e preto puxado para o café da marca."""
 
     def __init__(self, W, H, seed=3):
-        y, x = np.mgrid[0:H, 0:W].astype(np.float32)
-        r = np.sqrt(((x - W / 2) / (W * 0.62)) ** 2 + ((y - H * 0.48) / (H * 0.6)) ** 2)
-        self.vinheta = (1 - 0.38 * np.clip(r - 0.35, 0, 1) ** 1.6)[..., None].astype(np.float32)
-        rng = np.random.default_rng(seed)
-        self.graos = []
-        for _ in range(6):
-            g = rng.standard_normal((H // 2, W // 2)).astype(np.float32)
-            g = cv2.resize(g, (W, H), interpolation=cv2.INTER_LINEAR)
-            self.graos.append(g[..., None] * 5.0)
-
-    def aplicar(self, frame, i):
-        frame *= self.vinheta
-        frame += self.graos[i % len(self.graos)]
-        # levanta o preto para o café da marca, sem lavar a imagem
-        frame[:] = frame * (1 - 0.06) + FUNDO * 0.06 * 1.6
-        np.clip(frame, 0, 255, out=frame)
+        super().__init__(W, H, FUNDO, seed=seed)
 
 
 def fundo_marca(W, H):
