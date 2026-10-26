@@ -1,5 +1,5 @@
 {
-  "_sobre": "Roteiro do vídeo institucional do Dr. Cristovão Carvalho. Tempos em compassos da trilha (100 BPM, 1 compasso = 2,4 s). Esta versão é a prévia dos motions sobre as fotos do banco dele. Quando o vídeo bruto chegar, as cenas de foto passam a ser apoio sobre a fala, e a cena de cidade entra no momento em que ele cita cada cidade.",
+  "_sobre": "Institucional do Dr. Cristovão Carvalho. Base: o vídeo dele falando (IMG_6581.MOV), com a voz original. Por cima: nome na tela no início, efeito de cidade quando ele cita cada cidade, imagens de apoio só da cirurgia e motion de planejamento. Logo só no encerramento. Tempos em segundos do vídeo já editado. Os tempos dos efeitos abaixo são provisórios e serão acertados depois de assistir a fala.",
   "formato": { "largura": 1080, "altura": 1920, "fps": 30 },
   "bpm": 100,
   "medico": {
@@ -8,54 +8,15 @@
     "crm": "",
     "aviso": "Cada caso é avaliado individualmente."
   },
-  "cores": {
-    "marinho": "#000B3D",
-    "grafite": "#343434",
-    "dourado": "#D1A456"
-  },
-  "cenas": [
-    { "id": "abertura", "tipo": "monograma", "compassos": 2 },
-    {
-      "id": "apresentacao",
-      "tipo": "foto",
-      "foto": "fotos/retrato_olhar.jpg",
-      "compassos": 3,
-      "zoom": [1.0, 1.08],
-      "foco": [0.45, 0.32],
-      "nome_na_tela": true
-    },
-    {
-      "id": "valores",
-      "tipo": "foto",
-      "foto": "fotos/retrato_bracos.jpg",
-      "compassos": 3,
-      "zoom": [1.1, 1.0],
-      "foco": [0.5, 0.35],
-      "palavras": [
-        { "compasso": 0.2, "texto": "PRECISÃO" },
-        { "compasso": 1.15, "texto": "CONFIANÇA" },
-        { "compasso": 2.1, "texto": "EXCELÊNCIA" }
-      ]
-    },
-    { "id": "planejamento", "tipo": "motion_planejamento", "compassos": 2.5 },
-    {
-      "id": "cidade",
-      "tipo": "motion_cidade",
-      "compassos": 2.5,
-      "cidade": "NOVA IGUAÇU",
-      "uf": "RJ",
-      "chamada": "ATENDIMENTO EM",
-      "foto_fundo": ""
-    },
-    {
-      "id": "final",
-      "tipo": "foto",
-      "foto": "fotos/centro_cirurgico.jpg",
-      "compassos": 2,
-      "zoom": [1.0, 1.07],
-      "foco": [0.35, 0.3],
-      "frase": ["SEGURANÇA E NATURALIDADE", "em cada etapa"]
-    },
-    { "id": "encerramento", "tipo": "assinatura", "compassos": 2.5 }
+  "bruto": "brutos/fala.mov",
+  "trechos": null,
+  "nome_na_tela": { "em": 0.8, "dur": 4.0 },
+  "inserts": [],
+  "encerramento": { "dur": 4.8 },
+  "musica": { "volume_sem_fala": 0.55 },
+  "_exemplos_de_inserts": [
+    { "tipo": "cidade", "em": 12.0, "dur": 3.4, "cidade": "NOVA IGUAÇU", "uf": "RJ", "chamada": "ATENDIMENTO EM", "foto": "cidades/nova_iguacu.jpg" },
+    { "tipo": "apoio", "em": 20.0, "dur": 3.0, "video": "brutos/cirurgia_1.mov", "inicio": 4.0 },
+    { "tipo": "planejamento", "em": 28.0, "dur": 4.5 }
   ]
 }

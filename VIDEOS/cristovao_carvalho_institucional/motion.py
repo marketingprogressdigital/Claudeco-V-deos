@@ -383,14 +383,9 @@ def pino(diam):
 
 def cena_cidade(W, H, t, dur, fundo, cfg, foto=None):
     """Efeito de cidade: câmera mergulha num mapa estilizado, o pino cai com
-    ondas, e o nome da cidade entra letra a letra."""
+    ondas, e o nome da cidade entra letra a letra. Com foto da cidade, o mapa
+    se abre num círculo a partir do pino e revela a cidade."""
     frame = fundo.copy()
-    if foto is not None:
-        z = 1.0 + 0.08 * prog(t, 0, dur)
-        f = N.zoom_lento(foto, z, (0.5, 0.45))
-        cinza = f.mean(2, keepdims=True)
-        duo = MARINHO_FUNDO * (1 - cinza / 255) + np.array([90, 130, 210], np.float32) * (cinza / 255)
-        frame = frame * 0.35 + duo * 0.65
 
     ruas, avenidas, rio = mapa(W, H)
     hM, wM = ruas.shape
@@ -428,6 +423,22 @@ def cena_cidade(W, H, t, dur, fundo, cfg, foto=None):
                     cv2.LINE_AA, shift=2)
         N.pinta_mascara(frame, cv2.GaussianBlur(m, (0, 0), 6), MARINHO_FUNDO, 0.7)
         compor(frame, img, px - bx + img.shape[1] / 2, py - by + img.shape[0] / 2 - queda, min(1, pq * 3))
+
+    if foto is not None:
+        pi_ = ease_in_out(prog(t, 1.5, 0.9))
+        if pi_ > 0:
+            z = 1.12 - 0.08 * prog(t, 1.5, dur - 1.5)
+            f = N.zoom_lento(foto, z, (0.5, 0.45))
+            raio = 20 + np.hypot(W, H) * pi_
+            m = np.zeros((H, W), np.uint8)
+            cv2.circle(m, (int(px * 4), int(py * 4)), int(raio * 4), 255, -1, cv2.LINE_AA, shift=2)
+            a = (m.astype(np.float32) / 255)[..., None]
+            frame = frame * (1 - a) + f * a
+            if pi_ < 1:
+                m = np.zeros((H, W), np.uint8)
+                cv2.circle(m, (int(px * 4), int(py * 4)), int(raio * 4), 255, 6, cv2.LINE_AA, shift=2)
+                N.pinta_mascara(frame, m, DOURADO, 1 - pi_)
+            N.faixa_escura(frame, H * 0.70, 640, MARINHO_FUNDO, 0.6 * pi_)
 
     # textos
     yt = H * 0.62

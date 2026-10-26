@@ -2,4 +2,6 @@ brutos/*
 !brutos/.gitkeep
 saida/*
 !saida/.gitkeep
+cidades/*
+!cidades/.gitkeep
 __pycache__/

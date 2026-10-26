@@ -35,10 +35,12 @@ PLANO = {
     "cidade": ["C", "G", "Am"],
     "final": ["F", "G"],
     "encerramento": ["Csus", "C", "C"],
+    "corpo": ["C", "G", "Am", "F"],
 }
 GANHOS = {"abertura": 0.55, "apresentacao": 0.72, "valores": 0.9, "planejamento": 0.68,
-          "cidade": 1.0, "final": 0.9, "encerramento": 0.78}
-COM_BATIDA = {"apresentacao", "valores", "cidade", "final"}
+          "cidade": 1.0, "final": 0.9, "encerramento": 0.78, "corpo": 0.85}
+COM_BATIDA = {"apresentacao", "valores", "cidade", "final", "corpo"}
+CICLICAS = {"corpo"}
 
 
 def compor(roteiro):
@@ -82,7 +84,8 @@ def compor(roteiro):
             d = min(t0 + dur, ini + barra) - ini
             if d <= 0.05:
                 continue
-            raiz, voz, arp = ACORDES[acordes[min(b, len(acordes) - 1)]]
+            i_ac = b % len(acordes) if cid in CICLICAS else min(b, len(acordes) - 1)
+            raiz, voz, arp = ACORDES[acordes[i_ac]]
             poe(pads, pad(voz, d + 1.0, 1.25), ini - 0.25)
             if cid != "abertura":
                 poe(graves, baixo(raiz, d + 0.4), ini)
@@ -91,7 +94,7 @@ def compor(roteiro):
             if cid == "abertura":
                 for k, m in enumerate([arp[2], arp[1], arp[0]]):
                     poe(seco, piano(m + 12, 0.9, 0.32), ini + k * beat * 1.25 + 0.15, 0.3 + 0.2 * k)
-            elif cid in ("apresentacao", "valores", "cidade", "final", "planejamento"):
+            elif cid in ("apresentacao", "valores", "cidade", "final", "planejamento", "corpo"):
                 ordem = [0, 2, 1, 3, 2, 4, 3, 2]
                 for k in range(passos):
                     if cid == "planejamento" and k % 2:
@@ -130,6 +133,11 @@ def compor(roteiro):
             poe(graves, impacto(N, t0, 0.45), 0)
         if c["id"] == "encerramento":
             poe(graves, impacto(N, t0, 0.3), 0)
+    # acentos pedidos pela edição (ex.: entrada de cada cidade)
+    for em in roteiro.get("acentos", []):
+        if em > barra * 0.5:
+            poe(seco, subida(barra * 0.5, N, em) * 0.6, 0)
+        poe(graves, impacto(N, em, 0.35), 0)
 
     ir = reverb_ir(rt60=2.1, n_seg=3.0)
     molhado = np.stack([fftconvolve(seco[:, k] + pads[:, k] * 0.5, ir[:, k])[:N] for k in range(2)], 1)

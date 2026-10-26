@@ -1,31 +1,35 @@
 # Institucional, Dr. Cristovão Carvalho
 
-Vídeo vertical (1080x1920, 30 fps, 42 s) na identidade do manual da marca.
+Vídeo vertical (1080x1920, 30 fps) editado sobre a fala do Dr. Cristovão (IMG_6581.MOV), com a voz original.
 
-## Estado atual
-Esta versão mostra os motions e a trilha sobre as fotos do banco dele (sessão Formação 360). O vídeo bruto principal (IMG_6581.MOV, 58 MB) ainda não entrou, porque o conector do Drive só baixa arquivos de até 10 MB.
+## Regras desta edição
+- A base é a fala dele do começo ao fim.
+- Logo (monograma CC) só no encerramento. Nada de abertura com logo.
+- Imagem de apoio só de cirurgia (ele operando). Fotos posadas dele não entram.
+- Quando ele cita uma cidade: efeito de cidade (mapa estilizado, pino caindo, o mapa se abre num círculo e revela a foto da cidade, nome letra a letra).
 
-## Estrutura
-| Cena | Compassos | Conteúdo |
-|---|---|---|
-| Abertura | 2 | Anel dourado desenhado, CC entrelaçado, nome e área, brilho |
-| Apresentação | 3 | Retrato com aproximação lenta e nome na tela em painel de vidro marinho |
-| Valores | 3 | PRECISÃO, CONFIANÇA, EXCELÊNCIA (valores do manual) subindo em dourado |
-| Planejamento | 2,5 | Vista de cima da cabeça, linha frontal desenhada, unidades distribuídas |
-| Cidade | 2,5 | Câmera mergulha no mapa, pino cai com ondas, nome da cidade letra a letra |
-| Final | 2 | "Segurança e naturalidade em cada etapa" |
-| Encerramento | 2,5 | Monograma, nome, área e aviso |
+## Elementos
+| Elemento | Quando |
+|---|---|
+| Nome na tela (painel marinho, dourado) | início da fala |
+| Efeito de cidade | no segundo em que ele fala cada cidade |
+| Apoio de cirurgia | trechos escolhidos dos vídeos de cirurgia |
+| Motion de planejamento | se ele falar de planejamento ou desenho da linha frontal |
+| Encerramento com monograma, nome, área e aviso | final |
 
-Trilha original em `trilha.py` (100 BPM, dó maior), sem direito autoral de terceiros. Os cortes caem no tempo da música.
+Trilha original (`trilha.py`, 100 BPM, dó maior), por baixo da voz: abaixa sozinha quando ele fala (cerca de 10 dB abaixo da voz) e sobe nas pausas e no encerramento. Mix final em -14 LUFS.
 
 ## Identidade
-Do manual "IDENTIDADE VISUAL, Dr. Cristovão Carvalho": marinho #000B3D, grafite #343434, dourado #D1A456 e Montserrat. O monograma CC foi refeito em Cormorant Garamond a partir das peças publicadas. Ele deve ser trocado pelo PNG oficial assim que chegar.
-
-## Pendências
-- Vídeo bruto em `brutos/` e o minuto em que ele cita cada cidade
-- Fotos das cidades: no `roteiro.json`, campo `foto_fundo` da cena de cidade
-- CRM/UF e RQE no campo `medico.crm` (CFM exige em todas as telas)
-- Logo oficial em PNG
+Manual "IDENTIDADE VISUAL, Dr. Cristovão Carvalho": marinho #000B3D, grafite #343434, dourado #D1A456 e Montserrat. Monograma CC refeito em Cormorant Garamond até chegar o PNG oficial.
 
 ## Como gerar
-`python3 editar.py --previa` gera os quadros de conferência. `python3 editar.py` exporta `saida/institucional_cristovao.mp4`.
+1. Vídeo da fala em `brutos/fala.mov`, vídeos de cirurgia em `brutos/`, fotos das cidades em `cidades/` (brutos não vão para o repositório).
+2. Em `roteiro.json`: `trechos` (cortes da fala, ou null para usar inteira) e `inserts` (veja `_exemplos_de_inserts`), com os tempos em segundos do vídeo já cortado.
+3. `python3 editar.py --previa` gera quadros de conferência; `python3 editar.py` exporta `saida/institucional_cristovao.mp4`.
+
+## Pendências
+- Vídeo da fala com menos de 10 MB por arquivo (limite do conector do Drive)
+- Cidades citadas e fotos de cada uma
+- Vídeos dele operando para o apoio
+- CRM/UF e RQE (`medico.crm`), exigidos pelo CFM em todas as telas
+- Logo oficial em PNG
