@@ -1,0 +1,85 @@
+{
+  "_sobre": "10 criativos de tráfego pago (Meta, feed 4:5) do curso Tricologia de Elite, Ana Lara Granja. Copys do João (03/11/2026). Identidade: Manual de Marca v1.1 (outubro 2026). Fundo: fundos/NN.jpg; sem arquivo, a arte sai com o reflexo do verde e a faixa FUNDO PENDENTE.",
+  "criativos": [
+    {
+      "n": "01", "nome": "teto_da_cadeira", "rotulo": "TERAPIA CAPILAR",
+      "titulo": "Parou de atender, *parou de ganhar.*",
+      "apoio": "Na tricologia, queda capilar é tratamento. A paciente volta todo mês.",
+      "cta": "CONHEÇA O TRICOLOGIA DE ELITE",
+      "fundo": "Maca vazia em sala de clínica no fim do dia, luz baixa.",
+      "canva": "MAHZ4oY7cCw"
+    },
+    {
+      "n": "02", "nome": "paciente_que_voce_manda_embora", "rotulo": "TERAPIA CAPILAR",
+      "titulo": "Indicou outro profissional para a paciente com *queda de cabelo?*",
+      "apoio": "Você entregou meses de tratamento na mão de outra pessoa.",
+      "cta": "SAIBA MAIS",
+      "fundo": "Paciente saindo pela porta da clínica, profissional observando de costas.",
+      "canva": "MAHZ4twQQLA"
+    },
+    {
+      "n": "03", "nome": "guerra_de_preco", "rotulo": "TERAPIA CAPILAR",
+      "titulo": "Quem faz o que todo mundo faz, *disputa preço.*",
+      "apoio": "Quantas clínicas na sua cidade fazem tratamento capilar de verdade?",
+      "cta": "ENTRE NA TRICOLOGIA",
+      "fundo": "Fileira de bancadas de limpeza de pele idênticas, repetidas em perspectiva.",
+      "canva": "PENDENTE"
+    },
+    {
+      "n": "04", "nome": "parede_de_certificados", "rotulo": "TERAPIA CAPILAR",
+      "titulo": "Certificado na parede *não paga boleto.*",
+      "apoio": "O problema nunca foi técnica. Faltava um serviço que a paciente precisa repetir.",
+      "cta": "DESCUBRA COMO",
+      "fundo": "Parede cheia de certificados e agenda aberta vazia na mesa.",
+      "canva": "MAHZ4jFxl7E"
+    },
+    {
+      "n": "05", "nome": "trabalhando_para_os_outros", "rotulo": "TERAPIA CAPILAR",
+      "titulo": "Ela atende. *A dona da clínica fatura.*",
+      "apoio": "Quem tem especialidade própria não pede espaço, abre a própria agenda.",
+      "cta": "COMECE NA TRICOLOGIA",
+      "fundo": "Esteticista atendendo em primeiro plano, dona da clínica no caixa ao fundo, desfocada.",
+      "canva": "PENDENTE"
+    },
+    {
+      "n": "06", "nome": "o_corpo_cobra", "rotulo": "TERAPIA CAPILAR",
+      "titulo": "Dor nas costas, punho travado, *9 pacientes por dia.*",
+      "apoio": "Na tricologia, o valor está na avaliação e no acompanhamento.",
+      "cta": "SAIBA MAIS",
+      "fundo": "Esteticista cansada ao lado da maca, mão na lombar e no punho.",
+      "canva": "PENDENTE"
+    },
+    {
+      "n": "07", "nome": "o_erro_silencioso", "rotulo": "TERAPIA CAPILAR",
+      "titulo": "Tem protocolo capilar errado sendo aplicado *e ninguém percebe.*",
+      "apoio": "Sem entender a causa da queda, a paciente desiste na segunda sessão.",
+      "cta": "APRENDA O JEITO CERTO",
+      "fundo": "Close de mãos com luva aplicando sérum no couro cabeludo, rosto fora do quadro.",
+      "canva": "PENDENTE"
+    },
+    {
+      "n": "08", "nome": "aula_gratuita_curiosidade", "rotulo": "AULA GRATUITA",
+      "titulo": "O erro na primeira consulta capilar que faz a paciente *não voltar.*",
+      "apoio": "Não é preço, não é técnica. Na aula, Ana Lara mostra qual é.",
+      "cta": "GARANTA SUA VAGA",
+      "fundo": "Paciente de braços cruzados, desconfiada, na primeira consulta.",
+      "canva": "PENDENTE"
+    },
+    {
+      "n": "09", "nome": "aula_gratuita_oportunidade", "rotulo": "AULA GRATUITA",
+      "titulo": "Enquanto a estética briga por preço, a tricologia tem *paciente sobrando.*",
+      "apoio": "Queda de cabelo atinge homens e mulheres de todas as idades.",
+      "cta": "RESERVE SEU LUGAR",
+      "fundo": "Mulher de costas no espelho segurando uma mecha de cabelo.",
+      "canva": "PENDENTE"
+    },
+    {
+      "n": "10", "nome": "black_friday", "rotulo": "BLACK FRIDAY · ATÉ 30/11",
+      "titulo": "Vai entrar em 2027 fazendo *o mesmo procedimento* que todo mundo faz?",
+      "apoio": "Condição especial de Black Friday no Tricologia de Elite.",
+      "cta": "GARANTA ANTES QUE ACABE",
+      "fundo": "Mesa vista de cima à noite, agenda em branco, café e detalhe dourado.",
+      "canva": "PENDENTE"
+    }
+  ]
+}
