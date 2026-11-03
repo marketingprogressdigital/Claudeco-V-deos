@@ -79,7 +79,7 @@ ${fundo ? `<div class="foto" style="background-image:url('${fundo.url}')"></div>
   <div class="cta">${esc(c.cta)}<b>→</b></div>
 </div>
 <div class="rodape"><img src="${logo}"><span>COM ANA LARA</span></div>
-${!fundo ? '<div class="pendente">RASCUNHO · FUNDO PENDENTE</div>' : fundo.baixa ? '<div class="pendente">RASCUNHO · FUNDO EM BAIXA RESOLUÇÃO</div>' : ''}
+${process.env.SEM_FAIXA ? '' : !fundo ? '<div class="pendente">RASCUNHO · FUNDO PENDENTE</div>' : fundo.baixa ? '<div class="pendente">RASCUNHO · FUNDO EM BAIXA RESOLUÇÃO</div>' : ''}
 </div></body></html>`;
 }
 
