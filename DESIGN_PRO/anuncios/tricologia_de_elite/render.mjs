@@ -49,7 +49,7 @@ html,body{width:1080px;height:1350px;overflow:hidden;background:var(--profundo)}
 .foto{position:absolute;inset:0 0 auto 0;height:1000px;background-size:cover;background-position:center 35%;
   filter:saturate(.82) contrast(1.02)}
 .veu{position:absolute;inset:0;background:
-  linear-gradient(180deg,rgba(43,53,39,.55) 0%,rgba(43,53,39,0) 16%,rgba(43,53,39,0) 34%,rgba(43,53,39,.78) 56%,#2B3527 70%,#2B3527 100%)}
+  linear-gradient(180deg,rgba(43,53,39,.85) 0%,rgba(43,53,39,.45) 9%,rgba(43,53,39,0) 20%,rgba(43,53,39,0) 34%,rgba(43,53,39,.78) 56%,#2B3527 70%,#2B3527 100%)}
 .grao{position:absolute;inset:0;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
 .topo{position:absolute;left:80px;right:80px;top:72px;display:flex;justify-content:space-between;
   font:500 22px/1 Plex;letter-spacing:.22em;color:var(--off)}
